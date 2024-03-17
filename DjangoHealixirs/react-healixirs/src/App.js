@@ -1,3 +1,4 @@
+import Preloader from './Preloader';
 import logo from './logo.svg';
 import './App.css';
 
