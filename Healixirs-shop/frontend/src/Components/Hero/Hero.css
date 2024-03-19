@@ -50,3 +50,10 @@
     font-size: 20px;
     font-weight: 500;
 }
+
+.hero-right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
