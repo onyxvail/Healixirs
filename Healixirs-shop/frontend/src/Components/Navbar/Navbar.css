@@ -47,19 +47,19 @@
 
 .nav-login-cart{
     display: flex;
-    aligh-items: center;
+    align-items: center;
     gap: 45px;
 }
 
 .nav-login-cart button{
-    width: 155px;
-    height: 52px;
+    width: 120px;
+    height: 40px;
     outline: none;
     border: solid 1px #7a7a7a;
-    border-radius: 75px;
+    border-radius: 60px;
     color :#515151;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 300;
     background: white;
     cursor: cell;
 }
@@ -74,12 +74,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -35px;
-    margin-left:-55px;
+    margin-top: -60px;
+    margin-left:-70px;
     border-radius: 11px;
     font-size: 14px;
     background: #E593F0;
-    color: aqua;
+    color: blue;
 }
 
 .cart-image {

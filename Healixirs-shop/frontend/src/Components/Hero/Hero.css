@@ -10,18 +10,18 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    padding-left: 180px;
+    padding-left: 100px;
     line-height: 1.1;
 }
 
 .hero-left h2  {
-    font-size: 26px;
+    font-size: 50px;
     color: #090909;
     font-weight: 600;
 }
 
 .hero-left p {
-    font-size: 100px;
+    font-size: 80px;
     color: #171717;
     font-weight: 700;
 }
@@ -33,26 +33,26 @@
 }
 
 .hero-hand-icon img{
-    width: 105px;
+    width: 200px;
 }
 
 .hero-latest-btn{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    width: 310px;
+    gap: 25px;
+    width: 300px;
     height: 70px;
     border-radius: 75px;
     margin-top: 30px;
     background: #E593F0;
     color: white;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 100;
 }
 
 .hero-right{
-    flex: 1;
+    flex:5;
     display: flex;
     justify-content: center;
     align-items: center;
