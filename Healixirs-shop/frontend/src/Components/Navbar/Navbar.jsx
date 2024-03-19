@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Navbar.css';
 import logo from '../Assets/logo.png';
 import cart from '../Assets/cart.png';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
-    const [menu, setMenu] = useState("Shop");
     return (
         <div className='navbar'>
             <div className="nav-logo">
@@ -12,14 +12,14 @@ export const Navbar = () => {
                 <p> Healixirs </p>
             </div>
             <ul className="nav-menu">
-                <li onClick={() => setMenu("Home")}>Home {menu === "Home" ? <hr /> : null}</li>
-                <li onClick={() => setMenu("Shop")}>Shop {menu === "Shop" ? <hr /> : null}</li>
-                <li onClick={() => setMenu("About")}>About {menu === "About" ? <hr /> : null}</li>
-                <li onClick={() => setMenu("Contact")}>Contact {menu === "Contact" ? <hr /> : null}</li>
+                <li><Link style={{ textDecoration : 'none'}} to='/'>Home</Link></li>
+                <li><Link style={{ textDecoration : 'none'}} to='/shop'>Shop</Link></li>
+                <li><Link style={{ textDecoration : 'none'}} to='/abouts'>About</Link></li>
+                <li><Link style={{ textDecoration : 'none'}} to='/contacts'>Contact</Link></li>
             </ul>
             <div className="nav-login-cart">
-                <button> Login </button>
-                <img src={cart} alt="" className="cart-image"  />
+                <Link to='/login'><button>Login</button></Link>
+                <Link to='/cart'><img src={cart} alt="" className="cart-image" /></Link>
                 <div className="nav-cart-count">0</div>
             </div>
         </div>
