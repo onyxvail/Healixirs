@@ -2,14 +2,13 @@ import React from 'react';
 import handIcon from '../../Components/Assets/hand-icon.png';
 import arrowIcon from '../../Components/Assets/arrow-icon.png';
 import heroImage from '../../Components/Assets/hero-image.png';
-import './Hero.css'; // Import CSS for animations
 
 export const Hero = () => {
   return (
-    <div className='hero bg-gradient-to-b from-purple-900 via-purple-600 to-pink-100 h-screen flex animated-background'>
+    <div className='hero bg-black flex min-h-screen'>
       <div className="hero-left flex-1 flex flex-col justify-center items-start px-8 lg:px-16">
-        <h2 className="text-custom-purple text-5xl font-semibold">New Herbs</h2>
-        <div className="hand-hand-icon flex items-center gap-4">
+        <h2 className="text-white text-5xl font-semibold">New Herbs</h2>
+        <div className="hand-hand-icon flex items-center space-x-4">
           <p className="text-white text-4xl font-bold">New</p>
           <img src={handIcon} alt="" className="w-24" />
         </div>
@@ -21,7 +20,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="hero-right hidden lg:flex flex-5 justify-center items-center">
+      <div className="hero-right hidden lg:flex flex-1 justify-center items-center">
         <img src={heroImage} alt="" className="w-full" />
       </div>
     </div>
