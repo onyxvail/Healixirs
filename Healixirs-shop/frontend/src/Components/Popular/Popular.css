@@ -1,4 +1,4 @@
-.popular {
+/**.popular {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,3 +27,24 @@
     display: flex;
     gap: 30px;
 }
+**/
+.popular-title-container {
+    overflow: hidden;
+  }
+  
+  .popular-title-slide {
+    white-space: nowrap; /* Prevents text from wrapping */
+    display: inline-block; /* Display slides inline */
+    color: #00a6a6; /* Set text color to customBlue */
+    animation: slideRight 10s linear infinite; /* Apply animation */
+  }
+  
+  @keyframes slideRight {
+    from {
+      transform: translateX(0); /* Initial position */
+    }
+    to {
+      transform: translateX(-100%); /* Slide to the left */
+    }
+  }
+  

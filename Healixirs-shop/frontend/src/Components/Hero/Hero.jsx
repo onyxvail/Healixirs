@@ -1,5 +1,4 @@
 import React from 'react';
-import handIcon from '../../Components/Assets/hand-icon.png';
 import arrowIcon from '../../Components/Assets/arrow-icon.png';
 import heroImage from '../../Components/Assets/hero-image.png';
 
@@ -8,14 +7,10 @@ export const Hero = () => {
     <div className='hero bg-black flex min-h-screen'>
       <div className="hero-left flex-1 flex flex-col justify-center items-start px-8 lg:px-16">
         <h2 className="text-white text-5xl font-semibold">New Herbs</h2>
-        <div className="hand-hand-icon flex items-center space-x-4">
-          <p className="text-white text-4xl font-bold">New</p>
-          <img src={handIcon} alt="" className="w-24" />
-        </div>
         <p className="text-white text-4xl font-bold">Collection</p>
         <p className="text-white text-4xl font-bold">For Wood Elves</p>
         <div className="hero-latest-btn flex items-center bg-custom-purple text-white rounded-full py-4 px-8 mt-8">
-          <div>Latest merch</div>
+          <div>Latest Brew</div>
           <img src={arrowIcon} alt="" className="w-6 h-6 ml-2" />
         </div>
       </div>

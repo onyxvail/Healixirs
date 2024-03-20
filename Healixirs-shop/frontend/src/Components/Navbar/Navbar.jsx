@@ -11,13 +11,13 @@ export const Navbar = () => {
     };
 
     return (
-        <div className='flex flex-wrap justify-between items-center p-4 shadow-md bg-#0f1108 text-#00a6a6'>
+        <nav className='flex flex-wrap justify-between items-center p-4 shadow-md bg-customBlack text-customGreen sticky top-0 z-10'>
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
                 <img src={logo} alt="Logo" className="w-12 h-12" />
                 <p className="text-3xl font-semibold">Healixirs</p>
             </div>
             <button className="md:hidden focus:outline-none" onClick={toggleMenu}>
-                <svg className="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-6 h-6 text-customBlue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     {menuOpen ? (
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                     ) : (
@@ -26,18 +26,18 @@ export const Navbar = () => {
                 </svg>
             </button>
             <ul className={`md:flex md:items-center space-x-8 ${menuOpen ? 'block' : 'hidden'}`}>
-                <li><Link className="hover:text-teal-300" to='/' onClick={toggleMenu}>Home</Link></li>
-                <li><Link className="hover:text-teal-300" to='/shop' onClick={toggleMenu}>Shop</Link></li>
-                <li><Link className="hover:text-teal-300" to='/about' onClick={toggleMenu}>About</Link></li>
-                <li><Link className="hover:text-teal-300" to='/contact' onClick={toggleMenu}>Contact</Link></li>
+                <li><Link className="hover:text-customBlue-300" to='/' onClick={toggleMenu}>Home</Link></li>
+                <li><Link className="hover:text-customBlue-300" to='/shop' onClick={toggleMenu}>Shop</Link></li>
+                <li><Link className="hover:text-customBlue-300" to='/about' onClick={toggleMenu}>About</Link></li>
+                <li><Link className="hover:text-customBlue-300" to='/contact' onClick={toggleMenu}>Contact</Link></li>
             </ul>
             <div className="flex items-center space-x-8">
-                <Link to='/login' className="px-4 py-2 border border-gray-400 text-teal-400 rounded-md hover:bg-purple-500 hover:text-white">Login</Link>
+                <Link to='/login' className="px-4 py-2 border border-gray-400 text-customBlue-400 rounded-md hover:bg-customBlue-500 hover:text-white">Login</Link>
                 <Link to='/cart' className="relative">
                     <img src={cart} alt="Cart" className="w-10 h-10" />
-                    <div className="w-6 h-6 flex justify-center items-center bg-purple-500 text-white rounded-full absolute -top-1 -right-1">0</div>
+                    <div className="w-6 h-6 flex justify-center items-center bg-customBlue-500 text-customBlue rounded-full absolute -top-1 -right-1">0</div>
                 </Link>
             </div>
-        </div>
+        </nav>
     );
 }
