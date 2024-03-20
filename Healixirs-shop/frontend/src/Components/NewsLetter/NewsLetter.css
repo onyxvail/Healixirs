@@ -13,13 +13,13 @@
 }
 
 .newsletter h1{
-    color: #454545;
-    font-size: 55px;
-    font-weight: 600;
+    color: #grey;
+    font-size: 40px;
+    font-weight: 400;
 }
 
 .newsletter p{
-    color: #454545;
+    color: #grey;
     font-size: 20px;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .newsletter div button{
-    width: 210px;
+    width: 200px;
     height: 70px;
     cursor: cell;
     border-radius: 80px;
