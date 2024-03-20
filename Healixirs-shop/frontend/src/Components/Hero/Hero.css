@@ -1,4 +1,4 @@
-.hero{
+/**.hero{
     height: 100vh;
     background: linear-gradient(180deg, #1D0F2E, #fde1fd 60%);
     display: flex;
@@ -57,3 +57,18 @@
     justify-content: center;
     align-items: center;
 }
+**/
+/* Hero.css */
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .hero {
+    height: 100vh;
+    background: linear-gradient(180deg, #1D0F2E, #fde1fd);
+    animation: backgroundAnimation 10s infinite linear alternate;
+  }
+  

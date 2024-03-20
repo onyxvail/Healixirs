@@ -11,7 +11,7 @@ export const Navbar = () => {
     };
 
     return (
-        <div className='flex flex-wrap justify-between items-center p-4 shadow-md'>
+        <div className='sticky top-0 z-50 bg-white w-full flex flex-wrap justify-between items-center p-4 shadow-md'>
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
                 <img src={logo} alt="Logo" className="w-12 h-12" />
                 <p className="text-custom-purple text-3xl font-semibold">Healixirs</p>
@@ -32,7 +32,7 @@ export const Navbar = () => {
                 <li><Link className="text-gray-600 hover:text-gray-800" to='/contact' onClick={toggleMenu}>Contact</Link></li>
             </ul>
             <div className="flex items-center space-x-8">
-                <Link to='/login' className="px-4 py-2 border border-gray-400 text-gray-600 rounded-md hover:bg-purple-500 hover:text-white">Login</Link>
+                <Link to='/login' className="px-4 py-2 border border-gray-400 text-gray-600 rounded-md hover:bg-custom-purple-500 hover:text-white">Login</Link>
                 <Link to='/cart' className="relative">
                     <img src={cart} alt="Cart" className="w-10 h-10" />
                     <div className="w-6 h-6 flex justify-center items-center bg-purple-500 text-white rounded-full absolute -top-1 -right-1">0</div>
