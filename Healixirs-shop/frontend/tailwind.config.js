@@ -8,6 +8,8 @@ module.exports = {
         'customBlack': '#0f1108',
         'customOrange': '#ee7b30',
         'customWhite': '#efefef',
+        'customBg': '#8C1A6A',
+        'customNeon': '#c4ef17' ,
       },
     },
   },

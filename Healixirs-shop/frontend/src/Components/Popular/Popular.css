@@ -1,36 +1,6 @@
-/**.popular {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    height: 100vh;
-}
-
-.popular h1 {
-    color: #171717;
-    font-size: 40px;
-    font-weight: 500;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-}
-
-.popular hr {
-    width: 120px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: #252525;
-}
-.popular-item {
-    margin-top: 20px;
-    display: flex;
-    gap: 30px;
-}
-**/
 .popular-title-slide {
   white-space: nowrap; /* Prevents text from wrapping */
-  color: #00a6a6; /* Set text color to customBlue */
+  color: #c4ef17; /* Set text color to customBlue */
   font-size: 18px; /* Set the font size */
   animation: slideRight 20s linear infinite; /* Apply animation */
 }

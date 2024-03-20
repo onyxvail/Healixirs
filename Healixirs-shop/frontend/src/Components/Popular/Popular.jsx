@@ -25,7 +25,7 @@ export const Popular = () => {
     <div className='popular'>
       <div className="popular-title-container">
         <Slider {...settings}>
-          <div className="popular-title-slide">Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store</div>
+          <div className="popular-title-slide"> Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store Popular in Store</div>
         </Slider>
       </div>
       <hr/>   

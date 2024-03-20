@@ -1,4 +1,4 @@
-.offers{
+/**.offers{
     width: 65%;
     height: 60vh;
     display: flex;
@@ -46,3 +46,43 @@
     justify-content: flex-end;
     padding-top: 50px;
 }
+**/
+.hexagon-neon-shadow {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+  
+  .animate-float {
+    animation: floatAnimation 5s ease-in-out infinite;
+  }
+  
+  @keyframes floatAnimation {
+    0%, 100% {
+      transform: translateY(-5%);
+    }
+    50% {
+      transform: translateY(5%);
+    }
+  }
+  
+  .hexagon-neon-shadow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #00a6a6, #49f4f4);
+    z-index: -1;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: neonAnimation 2s infinite alternate;
+  }
+  
+  @keyframes neonAnimation {
+    0% {
+      box-shadow: 0 0 10px #00a6a6, 0 0 20px #00a6a6, 0 0 30px #00a6a6;
+    }
+    100% {
+      box-shadow: 0 0 5px #00a6a6, 0 0 10px #00a6a6, 0 0 15px #00a6a6;
+    }
+  }
+  

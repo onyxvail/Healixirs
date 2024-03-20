@@ -11,7 +11,7 @@ export const Navbar = () => {
     };
 
     return (
-        <nav className='flex flex-wrap justify-between items-center p-4 shadow-md bg-customBlack text-customGreen sticky top-0 z-10'>
+        <nav className='flex flex-wrap justify-between items-center p-4 shadow-md bg-customBlack text-customNeon sticky top-0 z-10'>
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
                 <img src={logo} alt="Logo" className="w-12 h-12" />
                 <p className="text-3xl font-semibold">Healixirs</p>

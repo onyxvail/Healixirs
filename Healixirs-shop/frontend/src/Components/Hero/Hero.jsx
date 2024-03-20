@@ -9,7 +9,7 @@ export const Hero = () => {
         <h2 className="text-white text-5xl font-semibold">New Herbs</h2>
         <p className="text-white text-4xl font-bold">Collection</p>
         <p className="text-white text-4xl font-bold">For Wood Elves</p>
-        <div className="hero-latest-btn flex items-center bg-custom-purple text-white rounded-full py-4 px-8 mt-8">
+        <div className="hero-latest-btn flex items-center bg-customNeon text-white rounded-full py-4 px-8 mt-8">
           <div>Latest Brew</div>
           <img src={arrowIcon} alt="" className="w-6 h-6 ml-2" />
         </div>
