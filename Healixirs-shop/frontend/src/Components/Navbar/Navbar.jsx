@@ -32,10 +32,11 @@ export const Navbar = () => {
                 <li><Link className="hover:text-customBlue-300" to='/contact' onClick={toggleMenu}>Contact</Link></li>
             </ul>
             <div className="flex items-center space-x-8">
-                <Link to='/login' className="px-4 py-2 border border-gray-400 text-customBlue-400 rounded-md hover:bg-customBlue-500 hover:text-white">Login</Link>
+                {/* Improved Button */}
+                <Link to='/login' className="px-4 py-2 border border-customBlue-400 text-customBlue-400 rounded-full transition-colors duration-300 hover:bg-customBlue-500 hover:text-white">Login</Link>
                 <Link to='/cart' className="relative">
                     <img src={cart} alt="Cart" className="w-10 h-10" />
-                    <div className="w-6 h-6 flex justify-center items-center bg-customBlue-500 text-customBlue rounded-full absolute -top-1 -right-1">0</div>
+                    <div className="w-6 h-6 flex justify-center items-center bg-customBlue-500 text-customBlue-100 rounded-full absolute -top-2 -right-2">0</div>
                 </Link>
             </div>
         </nav>

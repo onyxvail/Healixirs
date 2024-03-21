@@ -6,6 +6,7 @@ import p5_img from "./product_15.png";
 import p6_img from "./product_2.png";
 import p7_img from "./product_17.png";
 import p8_img from "./product_28.png";
+import sword from "./sword.png";
 
 let new_collections = [
   {
@@ -63,6 +64,14 @@ let new_collections = [
     image: p8_img,
     new_price: 100.0,
     old_price: 150.0,
+  },
+  {
+    id: 37,
+    name: "The Damned sword of Kleo",
+    category: "Elves",
+    image: sword,
+    new_price: 120.0,
+    old_price: 250.5,
   },
 ];
 

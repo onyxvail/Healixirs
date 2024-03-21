@@ -1,4 +1,4 @@
-.newsletter{
+/**.newsletter{
     width: 65%;
     height: 40vh;
     display: flex;
@@ -52,4 +52,4 @@
     background: black;
     color: white;
     font-size: 16px;
-}
+}**/
