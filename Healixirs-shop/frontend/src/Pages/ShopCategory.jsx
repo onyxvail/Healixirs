@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import './Css/ShopCategory.css';
+import { ShopContext } from '../Context/ShopContext'; // Import ShopContext
 
-const ShopCategory = () => {
+const ShopCategory = (props) => {
+  // eslint-disable-next-line
+  const { all_product } = useContext(ShopContext); // Use ShopContext
   return (
-    <div>ShopCategory</div>
+    <div className='shop-category'>
+      <img src={props.banner} alt="" />
+    </div>
   );
 };
 
