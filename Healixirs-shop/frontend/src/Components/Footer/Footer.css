@@ -1,62 +1,49 @@
-.footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
-
-.footer-logo{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-logo p{
-    color: #383838;
-    font-size: 46px;
-    font-weight: 700;
-}
-
-.footer-links{
-    display: flex;
-    list-style: none;
-    gap: 50px;
-    color: #252525;
-    font-size: 20px;
-}
-
-.footer-links li{
-    cursor: pointer;
-}
-
-.footer-social-icon{
-    display: flex;
-    gap: 20px;
-}
-
-.footer-icons-container{
-    padding: 10px;
-    padding-bottom: 6px;
-    background: #fbfbfb;
-    border: 1px solid #ebebeb;
-}
-
-.footer-copyright{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    margin-bottom: 30px;
-    color: #1a1a1a;
-    font-size: 20px;
-}
-
-.footer-copyright hr{
-    width: 80%;
-    border: none;
-    border-radius: 10px;
-    height: 3px;
-    background: #c7c7c7;
-}
+.footer {
+    background-color: #0f1108; /* Custom black background color */
+    color: #c4ef17; /* Custom white text color */
+    padding: 48px 24px; /* Padding for top and bottom (48px) and left and right (24px) */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  .footer:hover {
+    background-color: #191308; /* Darker background color on hover */
+  }
+  
+  .footer-links li {
+    margin-right: 16px; /* Margin between each link */
+    margin-bottom: 12px; /* Margin below each link */
+    transition: transform 0.3s ease; /* Smooth transition for link transform */
+  }
+  
+  .footer-links li:hover {
+    transform: translateY(-3px); /* Move the link up slightly on hover */
+  }
+  
+  .footer-social-icon {
+    display: flex; /* Display social icons horizontally */
+    margin-bottom: 24px; /* Margin below social icons */
+  }
+  
+  .footer-icons-container {
+    margin-right: 16px; /* Margin between each icon container */
+    transition: transform 0.3s ease; /* Smooth transition for icon transform */
+  }
+  
+  .footer-icons-container:hover {
+    transform: scale(1.1); /* Scale up the icon on hover */
+  }
+  
+  .footer-copyright hr {
+    border-color: #4b5563; /* Custom gray border color */
+    margin-bottom: 16px; /* Margin below the horizontal rule */
+  }
+  
+  .footer-copyright p {
+    font-size: 14px; /* Font size for the copyright text */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+  }
+  
+  .footer-copyright p:hover {
+    color: #9ca3af; /* Lighter text color on hover */
+  }
+  
