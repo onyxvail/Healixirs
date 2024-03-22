@@ -6,6 +6,7 @@ import { NewCollections } from '../Components/NewCollections/NewCollections';
 import { NewsLetter } from '../Components/NewsLetter/NewsLetter';
 import { Footer } from '../Components/Footer/Footer';
 
+
 const Shop = () => {
   return (
     <>
@@ -16,11 +17,9 @@ const Shop = () => {
       <Offer />
       <NewCollections/>
       <NewsLetter />
-     
+      <Footer/>
     </>
   );
 };
 
 export default Shop;
-
- /** i removed the footer under the newsletter  </Footer> from here and added it to App.js */

@@ -68,7 +68,7 @@ let new_collections = [
   {
     id: 37,
     name: "The Damned sword of Kleo",
-    category: "Elves",
+    category: "women",
     image: sword,
     new_price: 120.0,
     old_price: 250.5,
