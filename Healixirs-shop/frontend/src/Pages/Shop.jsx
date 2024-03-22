@@ -16,9 +16,11 @@ const Shop = () => {
       <Offer />
       <NewCollections/>
       <NewsLetter />
-      <Footer />
+     
     </>
   );
 };
 
 export default Shop;
+
+ /** i removed the footer under the newsletter  </Footer> from here and added it to App.js */

@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useContext } from 'react'; // Import useContext hook
 import './Css/ShopCategory.css';
 import { ShopContext } from '../Context/ShopContext';
-import {Footer} from '../Components/Footer/Footer';
+import { Footer } from '../Components/Footer/Footer';
 
 const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext);
