@@ -7,11 +7,11 @@ import { NewsLetter } from '../Components/NewsLetter/NewsLetter';
 import { Footer } from '../Components/Footer/Footer';
 
 
-const Shop = () => {
+const Home = () => {
   return (
     <>
       <Hero>
-        <div>Shop</div>
+        <div>Home</div>
       </Hero>
       <Popular />
       <Offer />
@@ -22,4 +22,4 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+export default Home;
