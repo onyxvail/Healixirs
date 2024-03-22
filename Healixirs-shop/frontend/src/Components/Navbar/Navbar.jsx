@@ -27,7 +27,7 @@ export const Navbar = () => {
             </button>
             <ul className={`md:flex md:items-center space-x-8 ${menuOpen ? 'block' : 'hidden'}`}>
                 <li><Link className="hover:text-customBlue-300" to='/' onClick={toggleMenu}>Home</Link></li>
-                <li><Link className="hover:text-customBlue-300" to='/shop' onClick={toggleMenu}>Shop</Link></li>
+                <li><Link className="hover:text-customBlue-300" to='/Shop' onClick={toggleMenu}>Shop</Link></li>
                 <li><Link className="hover:text-customBlue-300" to='/mens' onClick={toggleMenu}>Men</Link></li>
                 <li><Link className="hover:text-customBlue-300" to='/womens' onClick={toggleMenu}>Women</Link></li>
                 <li><Link className="hover:text-customBlue-300" to='/kids' onClick={toggleMenu}>Kids</Link></li>
