@@ -3,7 +3,7 @@ import React from 'react';
 const LoginSignup = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-customNeon to-customBlack bg-fixed bg-cover">
-      <div className="w-full max-w-lg bg-customBlack shadow-xl rounded-lg p-8">
+      <div className="w-full max-w-lg bg-customBlack shadow-xl rounded-lg p-8 transform transition-transform duration-500 hover:scale-105"> {/* Added transition and hover animation */}
         <h1 className="text-customNeon text-4xl font-bold text-center mb-6">Sign Up</h1>
         <div className="flex justify-center">
           <form className="w-full space-y-6">
