@@ -1,4 +1,4 @@
-.offers{
+/**.offers{
     width: 65%;
     height: 60vh;
     display: flex;
@@ -46,3 +46,4 @@
     justify-content: flex-end;
     padding-top: 50px;
 }
+**/

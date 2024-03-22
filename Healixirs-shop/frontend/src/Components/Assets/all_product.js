@@ -34,6 +34,7 @@ import p33_img from "./product_33.png";
 import p34_img from "./product_34.png";
 import p35_img from "./product_35.png";
 import p36_img from "./product_36.png";
+import sword from "./sword.png";
 
 let all_product = [
   {
@@ -323,6 +324,15 @@ let all_product = [
     image: p36_img,
     new_price: 85.0,
     old_price: 120.5,
+  },
+
+  {
+    id: 37,
+    name: "The Damned sword of Kleo",
+    category: "Elves",
+    image: sword,
+    new_price: 120.0,
+    old_price: 250.5,
   },
 ];
 

@@ -1,6 +1,14 @@
-*{
+/* Importing Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Resetting default margin */
+* {
   margin: 0;
 }
+
+/* Setting up body styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,7 +19,14 @@ body {
   font-family: Bruno Ace SC;
 }
 
+/* Styling code elements */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Example of using Tailwind CSS classes */
+.container {
+  @apply mx-auto px-4; /* Using Tailwind's utility classes */
+  max-width: 960px; /* Custom styles */
 }
