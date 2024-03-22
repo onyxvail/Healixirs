@@ -1,13 +1,16 @@
 import React, { useContext } from 'react';
 import './Css/ShopCategory.css';
-import { ShopContext } from '../Context/ShopContext'; // Import ShopContext
+import { ShopContext } from '../Context/ShopContext';
+import {Footer} from '../Components/Footer/Footer';
 
 const ShopCategory = (props) => {
-  // eslint-disable-next-line
-  const { all_product } = useContext(ShopContext); // Use ShopContext
+  const { all_product } = useContext(ShopContext);
+
   return (
     <div className='shop-category'>
       <img src={props.banner} alt="" />
+      {/* Conditionally render the Footer component */}
+      {props.category === 'men' || props.category === 'women' ? <Footer /> : null}
     </div>
   );
 };
