@@ -9,32 +9,42 @@ const ShopCategory = (props) => {
 
   return (
     <div className="shop-category bg-customEerie">
-      <img className="shopcategory-banner w-full h-auto object-cover" src={props.banner} alt="" />
+      {/* Banner with hover effect */}
+      <img className="shopcategory-banner w-full h-auto object-cover transition-transform duration-500 transform hover:scale-105" src={props.banner} alt="" />
 
-      <div className="container mx-auto px-4 pt-8 pb-16">
-        <div className="flex justify-between items-center mb-8">
+      {/* Container for product grid */}
+      <div className="container mx-auto px-4 py-8">
+        {/* Sorting and pagination */}
+        <div className="flex justify-between items-stretch mb-6">
           <p className="text-lg font-semibold text-customWhite">
             Showing 1-12 out of 36 products.
           </p>
+          {/* Dropdown for sorting */}
           <div className="shopcategory-sort flex items-center">
             <span className="mr-2 text-customWhite">Sort by</span>
             <img src={dropdown_icon} alt="Sort by" />
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {all_product.map((item, i) => {
+        {/* Product grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
+          {all_product.map((item) => {
+            // Check if the product belongs to the selected category
             if (props.category === item.category) {
               return (
-                <Item
-                  key={item.id}
-                  id={item.id}
-                  name={item.name}
-                  image={item.image}
-                  new_price={item.new_price}
-                  old_price={item.old_price}
-                  className="rounded-lg shadow-md overflow-hidden"
-                />
+                <div key={item.id} className="flex justify-center">
+                  {/* Item component for each product */}
+                  <Item
+                    id={item.id}
+                    name={item.name}
+                    image={item.image}
+                    new_price={item.new_price}
+                    old_price={item.old_price}
+                    titleClassName="text-sm text-center" // Make the title smaller and center-aligned
+                    imageClassName="w-full h-auto object-cover" // Make the image bigger
+                    className="rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
+                  />
+                </div>
               );
             } else {
               return null;
@@ -43,6 +53,7 @@ const ShopCategory = (props) => {
         </div>
       </div>
 
+      {/* Footer component */}
       <Footer />
     </div>
   );
