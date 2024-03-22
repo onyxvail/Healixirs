@@ -51,6 +51,12 @@ const ShopCategory = (props) => {
             }
           })}
         </div>
+        
+        {/* Explore more button */}
+        <div className="shopcategory-loadmore text-center mt-8">
+          <button className="bg-customNeon text-customBlack px-6 py-3 rounded-lg shadow-md hover:bg-customBlueDark transition-colors duration-300 ease-in-out">Explore more</button>
+        </div>
+
       </div>
 
       {/* Footer component */}
