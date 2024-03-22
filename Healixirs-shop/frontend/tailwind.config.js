@@ -10,6 +10,8 @@ module.exports = {
         'customWhite': '#efefef',
         'customBg': '#8C1A6A',
         'customNeon': '#c4ef17' ,
+        'customBeige': '#FFF1D0',
+        'customEerie': '#23231A',
       },
     },
   },
