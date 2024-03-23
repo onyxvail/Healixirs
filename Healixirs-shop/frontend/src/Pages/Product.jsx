@@ -5,6 +5,7 @@ import { Breadcrum } from '../Components/Breadcrums/Breadcrum';
 import { ProductDisplay } from '../Components/ProductDisplay/ProductDisplay';
 import { DescriptionBox } from '../Components/DescriptionBox/DescriptionBox';
 import { Footer } from '../Components/Footer/Footer';
+import { RelatedProducts } from '../Components/RelatedProducts/RelatedProducts';
 
 const Product = () => {
     const { productID } = useParams();
@@ -21,6 +22,7 @@ const Product = () => {
 
             <ProductDisplay product={product} />
             <DescriptionBox/>
+            <RelatedProducts/>
             <Footer/>
         </div>
     );
