@@ -5,7 +5,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './productdisplay.css'; 
-import { Footer } from '../Footer/Footer';
 
 export const ProductDisplay = (props) => {
     const { product } = props;
@@ -38,8 +37,8 @@ export const ProductDisplay = (props) => {
 
     return (
         <div className='bg-customNeon product-display-container'>
-            <div className='productdisplay mt-10 p-4 md:p-0 flex flex-wrap md:flex-nowrap bg-customNeon'>
-                <div className="productdisplay-left mb-4 md:mb-0 md:w-1/2 pr-4 h-full flex flex-col items-center justify-center">
+           <div className='productdisplay mt-2 p-4 md:p-0 flex flex-wrap md:flex-nowrap bg-customNeon mb-4'>
+           <div className="productdisplay-left mb-4 md:mb-0 md:w-1/2 pr-4 h-full flex flex-col items-center justify-center bg-customNeon">
                     <Slider {...mainImageSettings} className="h-full w-full main-image-slider">
                         {[...Array(4)].map((_, index) => (
                             <div key={index} className="h-full">
@@ -55,7 +54,7 @@ export const ProductDisplay = (props) => {
                         ))}
                     </Slider>
                 </div>
-                <div className="productdisplay-right md:w-1/2 h-full">
+                <div className="productdisplay-right md:w-1/2 h-full bg-customNeon" >
                     <h1 className="text-sm md:text-3xl font-semibold mb-10">{product.name}</h1>
                     <div className="flex items-center mb-20">
                         {[...Array(5)].map((_, index) => (
@@ -84,7 +83,6 @@ export const ProductDisplay = (props) => {
                     <p className="text-xs md:text-sm"><span className="font-semibold">Tags:</span> New Harvest, Old Harvest</p>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };
