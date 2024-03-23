@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import './CartItems.css';
 import { ShopContext } from '../../Context/ShopContext';
-
 import remove_icon from '../Assets/cart_cross_icon.png';
 
- const CartItems = () => {
+const CartItems = () => {
     const { all_product, CartItems, removeFromCart } = useContext(ShopContext);
 
     return (
@@ -12,14 +11,14 @@ import remove_icon from '../Assets/cart_cross_icon.png';
             <div className="cartitems-format-main">
                 <p>Products</p>
                 <p>Title</p>
-                <p>Prics</p>
+                <p>Price</p>
                 <p>Quantity</p>
                 <p>Remove</p>
             </div>
             <hr />
-            
-            {all_product.map((e) => {
-                if (CartItems[e.id] > 0) {
+
+            {all_product && all_product.map((e) => {
+                if (CartItems && CartItems[e.id] > 0) {
                     return (
                         <div key={e.id}>
                             <div className="cartitems-format">
@@ -39,4 +38,5 @@ import remove_icon from '../Assets/cart_cross_icon.png';
         </div>
     );
 };
+
 export default CartItems;
