@@ -4,6 +4,7 @@ import star_dull_icon from '../Assets/star_dull_icon.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './productdisplay.css'; 
 
 export const ProductDisplay = (props) => {
     const { product } = props;
@@ -26,7 +27,7 @@ export const ProductDisplay = (props) => {
                         <Slider {...settings} className="h-full">
                             {[...Array(4)].map((_, index) => (
                                 <div key={index} className="h-full">
-                                    <img src={product.image} alt={`Product ${index + 1}`} className="w-20 h-auto rounded-md shadow-md mb-2 hover:scale-105 transition-transform duration-300" />
+                                    <img src={product.image} alt={`Product ${index + 1}`} className="product-image w-40 md:w-auto h-auto rounded-md shadow-md mb-2 hover:scale-105 transition-transform duration-300" /> {/* Adjusted image size */}
                                 </div>
                             ))}
                         </Slider>

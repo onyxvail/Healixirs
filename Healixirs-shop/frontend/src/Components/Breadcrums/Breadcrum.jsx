@@ -10,14 +10,14 @@ export const Breadcrum = (props) => {
     }
 
     return (
-        <div className='flex items-center gap-2 text-gray-600 text-base font-semibold uppercase bg-customNeon'>
+        <div className='flex items-center gap-2 text-gray-600 text-base font-semibold uppercase bg-customNeon p-4 md:p-6'>
             <span>HOME</span>
             <img src={arrow_icon} alt="Arrow Icon" className="h-4 w-auto" />
             <span>SHOP</span>
             <img src={arrow_icon} alt="Arrow Icon" className="h-4 w-auto" />
-            <span>{product.category}</span>
+            <span className="text-gray-700">{product.category}</span>
             <img src={arrow_icon} alt="Arrow Icon" className="h-4 w-auto" />
-            <span>{product.name}</span>
+            <span className="text-gray-750">{product.name}</span>
         </div>
     );
 };
