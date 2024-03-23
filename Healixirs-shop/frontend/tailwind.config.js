@@ -12,6 +12,7 @@ module.exports = {
         'customNeon': '#c4ef17' ,
         'customBeige': '#FFF1D0',
         'customEerie': '#23231A',
+        'customRed' :'#EF2130',
       },
     },
   },

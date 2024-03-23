@@ -7,50 +7,72 @@ import 'slick-carousel/slick/slick-theme.css';
 import './productdisplay.css'; 
 import { Footer } from '../Footer/Footer';
 
-
-
 export const ProductDisplay = (props) => {
     const { product } = props;
 
-    const settings = {
+    const mainImageSettings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        horizental: true, // Set vertical layout
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: false, // Disable pause on hover
+        horizental: true,
+        cssEase: "ease-in-out", // Set the animation easing
+    };
+    
+    const smallImageSettings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: false, // Disable pause on hover
+        horizental: true,
+        cssEase: "linear" // Set the animation easing
     };
 
     return (
-        <div className='bg-customNeon'>
-            <div className='productdisplay mt-0 p-4 md:p-0 flex flex-wrap md:flex-nowrap'>
-                <div className="productdisplay-left mb-4 md:mb-0 md:w-1/2 pr-4 h-full">
-                    <Slider {...settings} className="h-full">
+        <div className='bg-customNeon product-display-container'>
+            <div className='productdisplay mt-10 p-4 md:p-0 flex flex-wrap md:flex-nowrap bg-customNeon'>
+                <div className="productdisplay-left mb-4 md:mb-0 md:w-1/2 pr-4 h-full flex flex-col items-center justify-center">
+                    <Slider {...mainImageSettings} className="h-full w-full main-image-slider">
                         {[...Array(4)].map((_, index) => (
                             <div key={index} className="h-full">
-                                <img src={product.image} alt={`Product ${index + 1}`} className="product-image w-40 md:w-auto h-auto rounded-md shadow-md mb-2" /> {/* Adjusted image size */}
+                                <img src={product.image} alt={`Product ${index + 1}`} className="product-image main-image" />
+                            </div>
+                        ))}
+                    </Slider>
+                    <Slider {...smallImageSettings} className="w-full mt-4">
+                        {[...Array(4)].map((_, index) => (
+                            <div key={index} className="h-full small-image">
+                                <img src={product.image} alt={`Product ${index + 1}`} className="product-image" />
                             </div>
                         ))}
                     </Slider>
                 </div>
                 <div className="productdisplay-right md:w-1/2 h-full">
                     <h1 className="text-sm md:text-3xl font-semibold mb-10">{product.name}</h1>
-                    <div className="flex items-center mb-20"> {/* Increased gap */}
+                    <div className="flex items-center mb-20">
                         {[...Array(5)].map((_, index) => (
                             <img key={index} src={star_icon} alt={`Star ${index + 1}`} className="h-4 md:h-6" />
                         ))}
                         <img src={star_dull_icon} alt="Dull Star" className="h-4 md:h-6" />
-                        <p className="ml-4 text-xs md:text-base">(120)</p> {/* Increased gap */}
+                        <p className="ml-4 text-xs md:text-base">(120)</p>
                     </div>
-                    <div className="flex justify-between mb-16">
-                        <div className="flex"> {/* Wrap the prices in a flex container */}
-                            <div className="text-gray-500 font-semibol text-base md:text-lg mr-20 line-through">${product.old_price}</div> {/* Added line-through */}
-                            <div className="text-red-500 font-semibold text-base md:text-lg">${product.new_price}</div>
+                    <div className="flex justify-between mb-5">
+                        <div className="flex">
+                            <div className="text-gray-500 font-semibol text-base md:text-lg mr-20 line-through">${product.old_price}</div>
+                            <div className="text-customRed font-semibold text-base md:text-lg">${product.new_price}</div>
                         </div>
                     </div>
-                    <div className="mb-14 text-xs md:text-sm">{product.description}</div>
-                    <div className="mb-10">
-                        <h1 className="font-semibold mb-4 text-sm md:text-base">Select Size</h1>
+                    <div className="mb-18 text-xs md:text-sm">{product.description}</div>
+                    <div className="mb-12">
+                        <h1 className="font-semibold mb-6 text-sm md:text-base">Select Size</h1>
                         <div className="flex flex-wrap gap-2">
                             {['S', 'XS', 'M', 'L', 'XL'].map(size => (
                                 <div key={size} className="border border-customBlack rounded-md py-2 px-4 text-xs md:text-sm">{size}</div>
@@ -62,7 +84,7 @@ export const ProductDisplay = (props) => {
                     <p className="text-xs md:text-sm"><span className="font-semibold">Tags:</span> New Harvest, Old Harvest</p>
                 </div>
             </div>
-            <Footer /> {/* Add Footer component */}
+            <Footer />
         </div>
     );
 };
