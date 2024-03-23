@@ -5,6 +5,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './productdisplay.css'; 
+import { Footer } from '../Footer/Footer';
+
+
 
 export const ProductDisplay = (props) => {
     const { product } = props;
@@ -15,8 +18,7 @@ export const ProductDisplay = (props) => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000
+        horizental: true, // Set vertical layout
     };
 
     return (
@@ -26,7 +28,7 @@ export const ProductDisplay = (props) => {
                     <Slider {...settings} className="h-full">
                         {[...Array(4)].map((_, index) => (
                             <div key={index} className="h-full">
-                                <img src={product.image} alt={`Product ${index + 1}`} className="product-image w-40 md:w-auto h-auto rounded-md shadow-md mb-2 hover:scale-105 transition-transform duration-300" /> {/* Adjusted image size */}
+                                <img src={product.image} alt={`Product ${index + 1}`} className="product-image w-40 md:w-auto h-auto rounded-md shadow-md mb-2" /> {/* Adjusted image size */}
                             </div>
                         ))}
                     </Slider>
@@ -60,6 +62,7 @@ export const ProductDisplay = (props) => {
                     <p className="text-xs md:text-sm"><span className="font-semibold">Tags:</span> New Harvest, Old Harvest</p>
                 </div>
             </div>
+            <Footer /> {/* Add Footer component */}
         </div>
     );
 };
