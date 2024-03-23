@@ -7,6 +7,7 @@ import { DescriptionBox } from '../Components/DescriptionBox/DescriptionBox';
 import { Footer } from '../Components/Footer/Footer';
 import { RelatedProducts } from '../Components/RelatedProducts/RelatedProducts';
 
+
 const Product = () => {
     const { productID } = useParams();
     console.log('Product ID:', productID);
