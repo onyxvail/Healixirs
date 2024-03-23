@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import star_icon from '../Assets/star_icon.png';
 import star_dull_icon from '../Assets/star_dull_icon.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './productdisplay.css'; 
+import { ShopContext } from '../../Context/ShopContext';
 
 export const ProductDisplay = (props) => {
     const { product } = props;
+    const {addToCart} = useContext(ShopContext);
 
     const mainImageSettings = {
         dots: true,
@@ -17,9 +19,9 @@ export const ProductDisplay = (props) => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        pauseOnHover: false, // Disable pause on hover
+        pauseOnHover: false,
         horizental: true,
-        cssEase: "ease-in-out", // Set the animation easing
+        cssEase: "ease-in-out",
     };
     
     const smallImageSettings = {
@@ -30,9 +32,9 @@ export const ProductDisplay = (props) => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        pauseOnHover: false, // Disable pause on hover
+        pauseOnHover: false,
         horizental: true,
-        cssEase: "linear" // Set the animation easing
+        cssEase: "linear"
     };
 
     return (
@@ -78,7 +80,7 @@ export const ProductDisplay = (props) => {
                             ))}
                         </div>
                     </div>
-                    <button className="bg-customBlack text-white px-4 py-2 rounded-md mb-6 hover:bg-customOrange transition-colors duration-300 text-xs md:text-sm">Add To Cart</button>
+                    <button onClick={()=> {addToCart(product.id)}} className="bg-customBlack text-white px-4 py-2 rounded-md mb-6 hover:bg-customOrange transition-colors duration-300 text-xs md:text-sm">Add To Cart</button>
                     <p className="text-xs md:text-sm mb-3"><span className="font-semibold">Category:</span> Female's Build, Crowns, Rings of magic, Wolves's Cape, Skins, Dragon's Armor</p>
                     <p className="text-xs md:text-sm"><span className="font-semibold">Tags:</span> New Harvest, Old Harvest</p>
                 </div>
