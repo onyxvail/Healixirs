@@ -18,7 +18,7 @@ export const Navbar = () => {
                 <li><Link className="hover:text-customBlue-300" to='/Shop'>Shop</Link></li>
                 <li><Link className="hover:text-customBlue-300" to='/mens'>Men</Link></li>
                 <li><Link className="hover:text-customBlue-300" to='/womens'>Women</Link></li>
-                <li><Link className="hover:text-customBlue-300" to='/kids'>Kids</Link></li>
+                <li><Link className="hover:text-customBlue-300" to='/Herbs'>Herbs</Link></li>
             </ul>
             <div className="flex items-center space-x-8">
                 <Link to='/login' className="px-4 py-2 border border-customBlue-400 text-customBlue-400 rounded-full transition-colors duration-300 hover:bg-customBlue-500 hover:text-white">Login</Link>
