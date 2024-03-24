@@ -83,6 +83,7 @@ margin: 100px 170px;
 .cartitems-promocode p{
     color :#555;
     font-weight: 700;
+    margin-right: 20px;
 }
 .cartitems-promobox{
     width: 504px;
@@ -90,6 +91,11 @@ margin: 100px 170px;
     height: 58px;
     padding-left: 20px;
     background: #eaeaea;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }
 .cartitems-promobox input{
     border: none;
