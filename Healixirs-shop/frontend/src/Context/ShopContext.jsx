@@ -49,7 +49,7 @@ export const ShopContextProvider = (props) => {
         addToCart,
         removeFromCart,
         getTotalCartAmount,
-        getTotalItems // Make sure to include getTotalItems in the context value
+        getTotalItems
     };
 
     return (
