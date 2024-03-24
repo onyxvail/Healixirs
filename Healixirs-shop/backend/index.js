@@ -38,6 +38,45 @@ app.post("/upload", upload.single("product"), (req, res) => {
     });
 });
 
+// Schema for creating products
+
+const Product = mongoose.model("product", {
+    id:{
+        type:Number,
+        required:true,
+    },
+    name:{
+        type:String,
+        required:true,
+    },
+    image:{
+        type:String,
+        required:true,
+    },
+    category:{
+        type:Number,
+        required:true,
+    },
+    new_price:{
+        type:Number,
+        required:true,
+    },
+    old_price:{
+        type:Number,
+        required:true,
+    },
+    date:{
+        type:Date,
+        default:Date.now,
+    },
+    available:{
+        type:Boolean,
+        required:true,
+    },
+});
+
+
+
 app.listen(port, (error) => {
     if (!error) {
         console.log('Server is running on port: ' + port);
