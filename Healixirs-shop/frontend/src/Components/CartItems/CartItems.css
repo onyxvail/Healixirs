@@ -6,7 +6,12 @@ margin: 100px 170px;
     background: #e2e2e2;
     border: 0;
 }
+.cartitems p{
+    font-size: 16px;
+    font-weight: 600;
+    color: #454545;
 
+}
 .cartitems-format-main{
     display: grid;
     grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
@@ -45,11 +50,13 @@ margin: 100px 170px;
     flex-direction: column;
     margin-right: 200px;
     gap: 40px;
+    font-weight: 700;
 }
 .cartitems-total-item{
     display: flex;
     justify-content: space-between;
     padding: 15px 0px;
+    font-weight: 300;
 }
 .cartitems-total button{
     width: 262px;
@@ -58,9 +65,15 @@ margin: 100px 170px;
     border: none;
     background: #ff5a5a;
     color: #fff;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 400;
     cursor: cell;
+    margin-left: -4px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }
 .cartitems-promocode{
     flex: 1;
@@ -69,6 +82,7 @@ margin: 100px 170px;
 }
 .cartitems-promocode p{
     color :#555;
+    font-weight: 700;
 }
 .cartitems-promobox{
     width: 504px;
@@ -92,4 +106,11 @@ margin: 100px 170px;
     color: #fff;
     font-size: 16px;
     cursor: cell;
+    margin-top: 30px;
+    margin-left: -15px;
+    border-radius: 30px;
+    -webkit-border-radius: 30;
+    -moz-border-radius: 30;
+    -ms-border-radius: 30;
+    -o-border-radius: 30;
 }
