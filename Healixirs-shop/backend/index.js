@@ -24,7 +24,7 @@ app.get("/",(req,res)=>{
 const storage = multer.diskStorage({
     destination: "./upload/images",
     filename:(req,file,cb)=>{
-             return cb(null,'${filename.fieldname}_${Date.now()}${path.extname(file.originalname)}')
+             return cb(null,'${file.fieldname}_${Date.now()}${path.extname(file.originalname)}')
     }
 })
 
@@ -34,13 +34,12 @@ const upload = multer({storage:storage})
 
 app.use('/images' , express.static('upload/images'))
 
-app.post("/upload",upload.single(product),(req,res)=>{
+app.post("/upload", upload.single('product'), (req,res) => {
     res.json({
-        success:1,
-        image_url:'http://localhost:${port}/images/${req.file.filename}'
-    
-    })
-})
+        success: 1,
+        image_url: `http://localhost:${port}/images/${req.file.filename}`
+    });
+});
 
 
 
