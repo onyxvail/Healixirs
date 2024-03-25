@@ -1,0 +1,42 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    gap: 20px;
+    width: 100%;
+    max-width: 250px;
+    height: 100vh;
+    background: rgb(231, 223, 223);
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px;
+    padding: 8px; /* Adjusted padding */
+    border-radius: 6px;
+    background: #f6f6f6;
+    gap: 10px; /* Adjusted gap between icon and text */
+    cursor: pointer;
+}
+
+.sidebar-item img {
+    width: 24px; /* Adjusted width of the icons */
+    height: 24px; /* Adjusted height of the icons */
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        max-width: 200px; /* Adjusted max-width for smaller screens */
+    }
+
+    .sidebar-item {
+        padding: 6px; /* Adjusted padding for smaller screens */
+    }
+
+    .sidebar-item img {
+        width: 20px; /* Adjusted width of the icons for smaller screens */
+        height: 20px; /* Adjusted height of the icons for smaller screens */
+    }
+}
