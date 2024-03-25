@@ -1,0 +1,73 @@
+.addproduct {
+    box-sizing: border-box;
+    width: calc(100% - 270px);
+    max-width: 800px;
+    margin: 20px 250px 20px 20px;
+    padding: 30px;
+    border-radius: 10px;
+    background: #efefef;
+    box-shadow: 0 0 10px #c4ef17;
+    font-family: Bruno Ace SC;
+}
+
+.addproduct-item-field input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: Bruno Ace SC;
+}
+
+.addproduct-price {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-family: Bruno Ace SC;
+}
+
+.add-product-selector {
+    flex: 1;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    color: #333;
+    font-size: 14px;
+    padding: 0 10px;
+    background-color: #f9f9f9;
+    margin-right: 10px;
+    font-family: Bruno Ace SC;
+}
+
+.addproduct-thumbnail-img {
+    height: 50px;
+    width: 80px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+.addproduct-btn {
+    width: 100px;
+    height: 42px;
+    border-radius: 6px;
+    background: #6079ff;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    font-family: Bruno Ace SC;
+}
+
+.addproduct-btn:hover {
+    background: #c4ef17;
+}

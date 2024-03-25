@@ -5,18 +5,8 @@
 
 .body{
   margin: 0;
-  font-family: valorant;
   background-color: #f6f6f6;
   height: 100vh;
   font-family: Bruno Ace SC;
 }
 
-/* Example of using Tailwind CSS classes */
-.container {
-  @apply mx-auto px-4; /* Using Tailwind's utility classes */
-  max-width: 960px; /* Custom styles */
-}
-/* Resetting default margin */
-* {
-  margin: 0;
-}

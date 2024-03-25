@@ -13,12 +13,12 @@ const AddProduct = () => {
         </div>
          
          <div className="product-price">
-          <div className="product-item-field">
+          <div className="addproduct-item-field">
           <p>Product price</p>
           <input type="text" name="old_price" placeholder="Type here" />
           </div>
           
-          <div className="product-item-field">
+          <div className="addproduct-item-field">
           <p>Offer price</p>
           <input type="text" name="new_price" placeholder="Type here" />
           </div>
