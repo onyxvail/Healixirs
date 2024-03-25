@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 60px;
+  box-shadow: 0 1px 3px -2px #000;
+  margin-bottom: 1px;
+  background: white;
+  height: 60px;
+}
+
+.navbar > *:not(:last-child) {
+  margin-right: 8px;
+}
+
+.nav-logo {
+  width: 50px;
+}
+
+.navProfile {
+  width: 190px;
+  margin-left: auto;
+}
+
+.nav-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  font-family: 'Bruno Ace SC';
+  color: #c4ef17;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 30px;
+  }
+}
