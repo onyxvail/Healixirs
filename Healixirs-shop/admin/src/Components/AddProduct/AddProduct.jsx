@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { createRoot } from 'react-dom/client';
+import { useState } from 'react';
 import './AddProduct.css';
 import upload_area from '../../Assets/upload_area.svg';
 
@@ -32,7 +31,7 @@ const AddProduct = () => {
       let formData = new FormData();
       formData.append('product', image);
 
-      const response = await fetch('http://localhost:5173/upload', {
+      const response = await fetch('http://localhost:4000/upload', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -49,11 +48,21 @@ const AddProduct = () => {
       if (responseData.success) {
         product.image = responseData.image_url;
         console.log(product);
+        await fetch ('http://localhost:4000/addproduct', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(product),
+        }).then((response) => response.json()).then((data) => {
+          data.success?alert('Product added successfully'):alert('Product not added');
+        });
+
+
       }
     } catch (error) {
-      console.error('Error:', error);
-      // Handle the error, e.g., show a notification to the user
-      // Example: setErrorState(error.message);
+      console.error('There was an error!', error);
     }
   };
 

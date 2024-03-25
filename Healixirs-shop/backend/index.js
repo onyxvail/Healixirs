@@ -95,7 +95,7 @@ app.post('/addproduct', async (req, res) => {
            new_price:req.body.new_price,
            old_price:req.body.old_price,
            date:req.body.date,
-           available: req.body.available
+           available: req.body.available || true
      });
     console.log(product);
     await product.save();
