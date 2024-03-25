@@ -18,11 +18,12 @@
     padding: 10px;
     border: 1px solid #ccc;
     outline: none;
-    color: #333;
+    color: black;
     font-size: 16px;
     margin-bottom: 20px;
     font-family: Bruno Ace SC;
 }
+
 
 .addproduct-price {
     display: flex;
