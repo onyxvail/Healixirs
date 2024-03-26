@@ -167,6 +167,31 @@ app.post('/signup', async (req, res) => {
     }
 });
 
+// Creating Endpoint for user login
+
+app.post('/login',async(req,res)=>{
+    let user = await Users.find(findOne({email:req.body.email}));
+    if (user) {
+        const passCompare = req.body.password === user.password;
+        if (passCompare){
+            const data = {
+                user:{
+                    id:user.id,
+                }
+            }
+            const token = jwt.sign(data,'secret_ecom');
+            res.json({success:true,token});
+        }
+        else{
+            res.json({success:false,message:"Invalid Password"});
+        }
+    }
+    else{
+        res.json({success:false,message:"User not found"});
+    }
+})
+
+
 app.listen(port, (error) => {
     if (!error) {
         console.log('Server is running on port: ' + port);
