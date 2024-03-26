@@ -35,7 +35,6 @@ app.post("/upload", upload.single("product"), (req, res) => {
         image_url: `http://localhost:${port}/images/${req.file.filename}`
     });
 });
-
 // Schema for products
 const productSchema = new mongoose.Schema({
     name: { type: String, required: true },
@@ -47,21 +46,15 @@ const productSchema = new mongoose.Schema({
     available: { type: Boolean, required: true, default: true }
 });
 
-const Product = mongoose.model("Product", productSchema);
-
 // Creating API for adding products
 app.post('/addproduct', async (req, res) => {
     try {
-        let products = await Product.find({});
-        let id = products.length > 0 ? products[products.length - 1].id + 1 : 1;
         const product = new Product({
-            id: id,
             name: req.body.name,
             image: req.body.image,
             category: req.body.category,
             new_price: req.body.new_price,
             old_price: req.body.old_price,
-            date: req.body.date,
             available: req.body.available || true
         });
         await product.save();
@@ -72,6 +65,29 @@ app.post('/addproduct', async (req, res) => {
         res.status(500).json({ success: false, error: error.message });
     }
 });
+
+// Creating API for getting products by category
+app.get('/api/products', async (req, res) => {
+    try {
+        const category = req.query.category; // Get the category from the query parameters
+        let products;
+
+        if (category) {
+            // If category is provided, filter products by category
+            products = await Product.find({ category: category });
+        } else {
+            // If no category is provided, fetch all products
+            products = await Product.find({});
+        }
+
+        console.log("Products Fetched:", products);
+        res.json(products);
+    } catch (error) {
+        console.error('Error fetching products:', error);
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
 
 // Creating API for deleting products
 app.post('/removeproduct', async (req, res) => {
