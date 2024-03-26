@@ -46,6 +46,9 @@ const productSchema = new mongoose.Schema({
     available: { type: Boolean, required: true, default: true }
 });
 
+// Define the product model
+const Product = mongoose.model('Product', productSchema);
+
 // Creating API for adding products
 app.post('/addproduct', async (req, res) => {
     try {
@@ -65,6 +68,7 @@ app.post('/addproduct', async (req, res) => {
         res.status(500).json({ success: false, error: error.message });
     }
 });
+
 
 // Creating API for getting products by category
 app.get('/api/products', async (req, res) => {
