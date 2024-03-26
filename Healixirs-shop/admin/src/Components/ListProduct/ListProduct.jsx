@@ -24,6 +24,28 @@ const ListProduct = () => {
     fetchInfo();
   }, []);
 
+  const remove_product = async (id) => {
+    try {
+      const response = await fetch('http://localhost:4000/removeproduct', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: id }),
+      });
+      if (!response.ok) {
+        throw new Error('Failed to remove product');
+      }
+      await fetchInfo();
+    } catch (error) {
+      console.error('Error removing product:', error);
+      // Handle error state
+      setError(error);
+    }
+  };
+  
+
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -52,7 +74,7 @@ const ListProduct = () => {
               <p>${product.old_price}</p>
               <p>${product.new_price}</p>
               <p>{product.category}</p>
-              <img className='listproduct-remove-icon' src={cross_icon} alt='remove' />
+              <img onClick={()=>{remove_product(product.id)}} className='listproduct-remove-icon' src={cross_icon} alt='remove' />
             </div>
             <hr />
             </>
