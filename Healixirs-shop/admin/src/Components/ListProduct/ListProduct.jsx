@@ -5,7 +5,7 @@ import cross_icon from '../../Assets/cross_icon.svg';
 
 const ListProduct = () => {
   const [allProducts, setAllProducts] = useState([]);
-  const [error, setError] = useState(null); // State to hold error information
+  const [error, setError] = useState(null);
 
   const fetchInfo = async () => {
     try {
@@ -16,7 +16,7 @@ const ListProduct = () => {
       const data = await response.json();
       setAllProducts(data);
     } catch (error) {
-      setError(error); // Set the error state if an error occurs during fetch
+      setError(error);
     }
   };
 
@@ -24,7 +24,7 @@ const ListProduct = () => {
     fetchInfo();
   }, []);
 
-  // Check for error and display an error message if error state is not null
+
   if (error) {
     return <div>Error: {error.message}</div>;
   }
@@ -45,7 +45,7 @@ const ListProduct = () => {
         <hr />
         {allProducts.map((product, index) => {
           console.log(product);
-          return (
+          return (<>
             <div key={index} className='listproduct-format-main listproduct-format'>
               <img src={product.image} alt='' className='listproduct-product-icon' />
               <p>{product.name}</p>
@@ -54,6 +54,9 @@ const ListProduct = () => {
               <p>{product.category}</p>
               <img className='listproduct-remove-icon' src={cross_icon} alt='remove' />
             </div>
+            <hr />
+            </>
+
           );
         })}
       </div>

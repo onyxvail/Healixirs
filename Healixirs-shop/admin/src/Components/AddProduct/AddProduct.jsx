@@ -27,24 +27,24 @@ const AddProduct = () => {
       console.log(productDetails);
       let responseData;
       let product = productDetails;
-
+  
       let formData = new FormData();
       formData.append('product', image);
-
-      const response = await fetch('http://localhost:4000/upload', {
+  
+      const response = await fetch('http://localhost:4000/upload', {  // Corrected URL
         method: 'POST',
         headers: {
           Accept: 'application/json',
         },
         body: formData,
       });
-
+  
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-
+  
       responseData = await response.json();
-
+  
       if (responseData.success) {
         product.image = responseData.image_url;
         console.log(product);
@@ -57,15 +57,12 @@ const AddProduct = () => {
           body: JSON.stringify(product),
         }).then((response) => response.json()).then((data) => {
           data.success?alert('Product added successfully'):alert('Product not added');
-        });
-
-
+        })
       }
     } catch (error) {
       console.error('There was an error!', error);
     }
-  };
-
+  }
   return (
     <div className='addproduct'>
       <div className="addproduct-item-field">

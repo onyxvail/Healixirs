@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom'; // Correct import
+import ReactDOM from 'react-dom';
 import App from './App.jsx';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
