@@ -2,6 +2,59 @@ import React, { useState } from 'react';
 
 const LoginSignup = () => {
   const [state, setState] = useState("Login");
+  const [formData,setFormData] = useState({
+    username:"",
+    password:"",
+    email:""
+  })
+
+  const changeHandler = (e) => {
+    setFormData({...formData,[e.target.name]:e.target.value})
+  }
+
+  const login = async (e)=>{
+    console.log("Login Function Executed",formData);
+    let responseData;
+    await fetch('http://localhost:4000/login',{
+      method:'POST',
+      headers:{
+        Accept:'application/form-data',
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(formData),
+    }).then((response)=> response.json()).then((data)=>responseData=data);
+
+    if (responseData.success){
+      localStorage.setItem('auth-token',responseData.token);
+      window.location.replace("/");
+    }
+    else{
+      alert(responseData.errors)
+    }
+  }
+
+
+
+  const signup = async (e)=>{
+    console.log("SignUp Function Executed",formData);
+    let responseData;
+    await fetch('http://localhost:4000/signup',{
+      method:'POST',
+      headers:{
+        Accept:'application/form-data',
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(formData),
+    }).then((response)=> response.json()).then((data)=>responseData=data);
+
+    if (responseData.success){
+      localStorage.setItem('auth-token',responseData.token);
+      window.location.replace("/");
+    }
+    else{
+      alert(responseData.errors)
+    }
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-customNeon to-customBlack bg-fixed bg-cover">
@@ -11,7 +64,7 @@ const LoginSignup = () => {
           <form className="w-full space-y-6">
             <div className="relative">
               {state === "Sign Up" ? (
-                <input
+                <input name='username' value={formData.username} onChange={changeHandler}
                   type="text"
                   placeholder="Your Name"
                   className="input border border-gray-300 px-4 py-3 rounded-lg w-full"
@@ -21,20 +74,20 @@ const LoginSignup = () => {
               )}
             </div>
             <div className="relative">
-              <input
+              <input name='email' value={formData.email} onChange={changeHandler} 
                 type="email"
                 placeholder="E-mail Address"
                 className="input border border-gray-300 px-4 py-3 rounded-lg w-full"
               />
             </div>
             <div className="relative">
-              <input
+              <input name='password' value={formData.password} onChange={changeHandler}
                 type="password"
                 placeholder="Password"
                 className="input border border-gray-300 px-4 py-3 rounded-lg w-full"
               />
             </div>
-            <button className="btn btn-primary w-full text-customBlack bg-gradient-to-br from-customNeon to-customBlack px-4 py-3 rounded-lg">Continue</button>
+            <button onClick={()=>{state==="Login"?login():signup()}} className="btn btn-primary w-full text-customBlack bg-gradient-to-br from-customNeon to-customBlack px-4 py-3 rounded-lg">Continue</button>
             {state === "Sign Up" ? (
               <p className="text-sm mt-4 text-gray-300 text-center">
                 Already have an account? <span onClick={() => setState("Login")} className="text-customNeon cursor-pointer">Login Here</span>
