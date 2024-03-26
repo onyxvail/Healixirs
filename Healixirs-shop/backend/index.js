@@ -11,9 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 // Database Connection with MongoDB
-// Database Connection with MongoDB
-mongoose.connect("mongodb+srv://onyxvail:Onyx2121@cluster0.ueuajkx.mongodb.net");
-
+mongoose.connect("mongodb+srv://onyxvail:Onyx2121@cluster0.ueuajkx.mongodb.net/e-commerce");
 
 // API Creation
 app.get("/", (req, res) => {
@@ -121,38 +119,53 @@ const Users = mongoose.model('Users',{
     }
 })
 
-// Creating Endpoint for regestring the user
+// Creating Endpoint for registering the user
+app.post('/signup', async (req, res) => {
+    console.log("Received signup request with body:", req.body);
 
-app.post('/signup',async (req,res)=>{
-    
-    let check = await Users.findOne({email:req.body.email});
-    if(check){
-    return res.status(400).json({success:false,error:"Email already exist"});
-}
-let cart = {};
-for(let i = 0;i<300; i++){
-    cart[i]=0;
-}
+    try {
+        // Check if the email already exists
+        let existingUser = await Users.findOne({ email: req.body.email });
+        if (existingUser) {
+            console.log("Email already exists:", req.body.email);
+            return res.status(400).json({ success: false, error: "Email already exists" });
+        }
 
-const user = new Users({
-    name:req.body.name,
-    email:req.body.email,
-    password:req.body.password,
-    cartData:cart,
-})
+        // Create a cart object for the new user
+        let cart = {};
+        for (let i = 0; i < 300; i++) {
+            cart[i] = 0;
+        }
 
-await user.save();
+        // Create a new user instance
+        const newUser = new Users({
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password,
+            cartData: cart,
+        });
 
-const data = {
-    user:{
-        id:user.id,
+        // Save the new user to the database
+        await newUser.save();
+
+        console.log("User saved:", newUser);
+
+        // Generate JWT token for the new user
+        const tokenData = {
+            user: {
+                id: newUser.id,
+            }
+        };
+        const token = jwt.sign(tokenData, 'secret_ecom');
+        console.log("Token generated:", token);
+
+        // Return success response with token
+        res.status(201).json({ success: true, token });
+    } catch (error) {
+        console.error('Error registering user:', error);
+        res.status(500).json({ success: false, error: "Internal server error" });
     }
-}
-
-const token = jwt.sign(data,'secret_ecom');
-res.json({success:true,token})
-})
-
+});
 
 app.listen(port, (error) => {
     if (!error) {
