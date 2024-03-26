@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const LoginSignup = () => {
-  const [state] = useState("Login");
+  const [state, setState] = useState("Login");
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-customNeon to-customBlack bg-fixed bg-cover">
@@ -35,11 +35,17 @@ const LoginSignup = () => {
               />
             </div>
             <button className="btn btn-primary w-full text-customBlack bg-gradient-to-br from-customNeon to-customBlack px-4 py-3 rounded-lg">Continue</button>
+            {state === "Sign Up" ? (
+              <p className="text-sm mt-4 text-gray-300 text-center">
+                Already have an account? <span onClick={() => setState("Login")} className="text-customNeon cursor-pointer">Login Here</span>
+              </p>
+            ) : (
+              <p className="text-sm mt-4 text-gray-300 text-center">
+                Create a new account <span onClick={() => setState("Sign Up")} className="text-customNeon cursor-pointer">Click here</span>
+              </p>
+            )}
           </form>
         </div>
-        <p className="text-sm mt-4 text-gray-300 text-center">
-          Already have an account? <span className="text-customNeon cursor-pointer">Login Here</span>
-        </p>
         <label className="flex items-center mt-2 text-sm text-gray-500">
           <input type="checkbox" className="mr-2 mt-px" />
           <span>
