@@ -11,6 +11,7 @@ import men_banner from './Components/Assets/banner_mens.png';
 import women_banner from './Components/Assets/banner_women.png';
 import herbs_banner from './Components/Assets/banner_herbs.png';
 import ScrollToTopButton from './Components/ScrollUp/ScrollUp';
+import AboutPage from './Pages/About';
 
 function App() {
   useEffect(() => {
@@ -54,6 +55,7 @@ function App() {
           <Route path='/product/:productID' element={<Product />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<LoginSignup />} />
+          <Route path='/About' element={<AboutPage />} />
         </Routes>
         <ScrollToTopButton />
       </BrowserRouter>

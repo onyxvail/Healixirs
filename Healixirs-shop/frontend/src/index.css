@@ -27,6 +27,11 @@ code {
     monospace;
 }
 
+.custom-background-color {
+  background-color: #c4ef17 !important;
+}
+
+
 
 /* Define CSS animations and classes */
 
