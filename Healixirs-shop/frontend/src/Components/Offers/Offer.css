@@ -1,49 +1,27 @@
-/**.offers{
-    width: 65%;
-    height: 60vh;
-    display: flex;
-    margin: auto;
-    padding: 0px 200px;
-    margin-bottom: 200px;
-    background: linear-gradient(180deg, #fde1fd, #1D0F2E 60%);;
-}
-
-.offers-left{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.offers-left h1{
-    color: #171717;
-    font-size: 40px;
-    font-weight: 500;
-}
-
-.offers-left p{
-    color: #171717;
-    font-size: 20px;
-    font-weight: 500;
-}
-.offers-left button {
-    width: 282px;
-    height: 70px;
-    border-radius: 35px;
-    background-color: #E593F0;
-    border: none;
-    color: white;
-    font-size: 22px;
-    font-family: 500;
-    margin-top: 30px;
-    cursor: cell;
-}
-
-.offers-right{
-    flex: 1;
+.offer-container {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-top: 50px;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0f0f0f;
+  }
+  
+  .image-animation {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .content-animation {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  @keyframes glowing {
+    0% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(64, 241, 19), 0 0 70px #0ff, 0 0 80px #0ff, 0 0 100px #0ff, 0 0 150px #0ff; }
+    50% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px rgb(98, 212, 45), 0 0 35px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 75px #0ff; }
+    100% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(55, 235, 31), 0 0 70px #0ff, 0 0 80px #0ff, 0 0 100px #0ff, 0 0 150px #0ff; }
+  }
+  
+  .glow-text {
+    animation: glowing 3s infinite alternate;
+    -webkit-animation: glowing 3s infinite alternate;
 }
-**/
+  
