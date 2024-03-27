@@ -51,7 +51,7 @@ export const Footer = () => {
 
       <div className="footer-copyright text-center mt-8 ml-auto">
         <hr className="border-gray-600 mb-4" />
-        <p className="text-sm">Copyrights @ 2024. All Rights Reserved.</p>
+        <p className="text-sm">Copyrights © 2024. All rights reserved.</p>
       </div>
     </div>
   );

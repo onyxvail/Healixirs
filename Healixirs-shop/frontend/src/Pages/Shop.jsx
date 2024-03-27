@@ -5,9 +5,16 @@ import { Offer } from '../Components/Offers/Offer';
 import { NewCollections } from '../Components/NewCollections/NewCollections';
 import { NewsLetter } from '../Components/NewsLetter/NewsLetter';
 import { Footer } from '../Components/Footer/Footer';
+import { useEffect } from 'react';
+import soundFile from '../Components/Assets/sound.mp3';
 
 
 const Home = () => {
+  useEffect(() => {
+    const audio = new Audio(soundFile);
+    audio.play();
+  }, []);
+
   return (
     <>
       <Hero>
