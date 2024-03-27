@@ -11,13 +11,14 @@
 /* Setting up body styles */
 body {
   margin: 0;
+  margin-right: -10px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: Bruno Ace SC;
-  background: #c4ef17;
+  background: #0f1108;
 }
 
 /* Styling code elements */
