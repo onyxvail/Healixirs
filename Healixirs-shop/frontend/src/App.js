@@ -10,6 +10,7 @@ import LoginSignup from './Pages/LoginSignup';
 import men_banner from './Components/Assets/banner_mens.png';
 import women_banner from './Components/Assets/banner_women.png';
 import herbs_banner from './Components/Assets/banner_herbs.png';
+import ScrollToTopButton from './Components/ScrollUp/ScrollUp';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<LoginSignup />} />
         </Routes>
+        <ScrollToTopButton /> {/* Include the ScrollToTopButton component */}
       </BrowserRouter>
     </div>
   );

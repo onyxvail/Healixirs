@@ -18,7 +18,7 @@ export const Popular = () => {
     cssEase: 'linear',
     pauseOnHover: false,
     variableWidth: true,
-    adaptiveHeight: true, // Adjusts slide height to the content
+    adaptiveHeight: true,
   };
 
   return (
@@ -30,7 +30,7 @@ export const Popular = () => {
       </div>
       <hr/>   
       <div className="popular-item">
-        <Slider {...settings}> {/* Add slider for images */}
+        <Slider {...settings}>
           {data_product.map((item, i) => (
             <div key={i} className="popular-item-slide">
               <Item id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />

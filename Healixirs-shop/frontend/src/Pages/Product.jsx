@@ -14,7 +14,6 @@ const Product = () => {
 
     const { all_product } = useContext(ShopContext);
     
-    // Find the product based on the productID
     const product = all_product.find((e) => e.id === Number(productID));
 
     return (

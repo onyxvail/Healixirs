@@ -15,7 +15,7 @@ export const Navbar = () => {
             </div>
             <ul className="md:flex md:items-center space-x-8">
                 <li><Link className="hover:text-customBlue-300" to='/'>Home</Link></li>
-                <li><Link className="hover:text-customBlue-300" to='/Shop'>Shop</Link></li>
+                <li><Link className="hover:text-customBlue-300" to='/About'>About</Link></li>
                 <li><Link className="hover:text-customBlue-300" to='/mens'>Men</Link></li>
                 <li><Link className="hover:text-customBlue-300" to='/womens'>Women</Link></li>
                 <li><Link className="hover:text-customBlue-300" to='/Herbs'>Herbs</Link></li>

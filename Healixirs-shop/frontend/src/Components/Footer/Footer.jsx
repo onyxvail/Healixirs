@@ -42,7 +42,7 @@ export const Footer = () => {
           </div>
 
           <div className="footer-icons-container">
-            <a href="https://github.com/onyxvail" className="flex items-center justify-center"> {/* Updated this line */}
+            <a href="https://github.com/onyxvail" className="flex items-center justify-center">
               <img src={github_icon} alt="Github" className="w-12 hover:animate-bounce" />
             </a>
           </div>

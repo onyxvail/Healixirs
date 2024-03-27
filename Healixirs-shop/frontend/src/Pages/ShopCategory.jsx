@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom'; // Import Link component
 import { ShopContext } from '../Context/ShopContext';
 import { Footer } from '../Components/Footer/Footer';
 import { Item } from '../Components/Items/Item';
@@ -21,7 +22,7 @@ const ShopCategory = (props) => {
           </p>
           {/* Dropdown for sorting */}
           <div className="shopcategory-sort flex items-center">
-            <span className="mr-2 text-customWhite">Sort by</span>
+            <span className="mr-2 text-customWhite"></span>
             <img src={dropdown_icon} alt="Sort by" />
           </div>
         </div>
@@ -40,8 +41,8 @@ const ShopCategory = (props) => {
                     image={item.image}
                     new_price={item.new_price}
                     old_price={item.old_price}
-                    titleClassName="text-sm text-center" // Make the title smaller and center-aligned
-                    imageClassName="w-full h-auto object-cover" // Make the image bigger
+                    titleClassName="text-sm text-center"
+                    imageClassName="w-full h-auto object-cover"
                     className="rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
                   />
                 </div>
@@ -54,12 +55,12 @@ const ShopCategory = (props) => {
         
         {/* Explore more button */}
         <div className="shopcategory-loadmore text-center mt-8">
-          <button className="bg-customNeon text-customBlack px-6 py-3 rounded-lg shadow-md hover:bg-customBlueDark transition-colors duration-300 ease-in-out">Explore more</button>
+          <Link to="/about">
+            <button className="bg-customNeon text-customBlack px-6 py-3 rounded-lg shadow-md hover:bg-customBlueDark transition-colors duration-300 ease-in-out">Check the Lore</button>
+          </Link>
         </div>
 
       </div>
-
-      {/* Footer component */}
       <Footer />
     </div>
   );
