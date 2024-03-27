@@ -6,6 +6,38 @@ import { ShopContext } from '../../Context/ShopContext';
 const CartItems = () => {
     const { all_product, cartItems, removeFromCart, getTotalCartAmount } = useContext(ShopContext);
 
+    const handleProceedToCheckout = async () => {
+        try {
+            const response = await fetch('/api/payment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    amount: getTotalCartAmount(), // Send total cart amount to the backend
+                    currency: 'USD', // Adjust currency if needed
+                    // Add other required parameters for CHAPA API
+                    // tx_ref: 'your_transaction_reference',
+                    // return_url: 'your_return_url',
+                })
+            });
+
+            // Check if the response is OK
+            if (!response.ok) {
+                throw new Error('Error initiating payment');
+            }
+
+            // Parse the response as JSON
+            const data = await response.json();
+
+            // Redirect user to CHAPA payment interface
+            window.location.href = data.checkoutUrl;
+        } catch (error) {
+            console.error('Error initiating payment:', error.message);
+            // Handle error - display error message or perform other actions
+        }
+    };
+
     return (
         <div className='cartitems'>
             <div className="cartitems-format-main">
@@ -53,12 +85,12 @@ const CartItems = () => {
                            <h3>${getTotalCartAmount()}</h3>
                         </div>
                     </div>
-                    <button className="animate-pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mt-4">PROCEED TO CHECKOUT</button>
+                    <button onClick={handleProceedToCheckout} className="animate-pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mt-4">PROCEED TO CHECKOUT</button>
                 </div>
                 <div className="cartitems-promocode">
                     <p>If you have a Promocode, Enter it here</p>
                     <div className="cartitems-promobox">
-                        <input type="text" placeholder='Enter Promocode' className="border-2 border-gray-300 rounded-l px-4 py-2 w-2/3" />
+                        <input type="text" id="promocode" placeholder='Enter Promocode' className="border-2 border-gray-300 rounded-l px-4 py-2 w-2/3" />
                         <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-r">Submit</button>
                     </div>
                  </div>

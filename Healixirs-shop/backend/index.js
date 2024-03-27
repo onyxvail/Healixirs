@@ -6,6 +6,7 @@ const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
+const axios = require("axios");
 
 app.use(express.json());
 app.use(cors());
@@ -13,10 +14,8 @@ app.use(cors());
 // Database Connection with MongoDB
 mongoose.connect("mongodb+srv://onyxvail:Onyx2121@cluster0.ueuajkx.mongodb.net/e-commerce");
 
-// API Creation
-app.get("/", (req, res) => {
-    res.send("Express App is Running");
-});
+// CHAPA API key
+const CHAPA_AUTH_KEY = 'CHAPUBK_TEST-1mIlG71s309YSmupbs17lHpbFvLdZBCE';
 
 // Image Storage Engine
 const storage = multer.diskStorage({
@@ -35,6 +34,7 @@ app.post("/upload", upload.single("product"), (req, res) => {
         image_url: `http://localhost:${port}/images/${req.file.filename}`
     });
 });
+
 // Schema for products
 const productSchema = new mongoose.Schema({
     name: { type: String, required: true },
@@ -48,6 +48,43 @@ const productSchema = new mongoose.Schema({
 
 // Define the product model
 const Product = mongoose.model('Product', productSchema);
+
+// CHAPA API Endpoint for initiating transaction
+const CHAPA_API_URL = 'https://chapa.com/api/transaction/initiate';
+
+// Creating API for initiating payment with CHAPA
+app.post('/api/payment', async (req, res) => {
+    try {
+        // Construct the request body for CHAPA API
+        const body = {
+            amount: req.body.amount,
+            currency: req.body.currency,
+            tx_ref: req.body.tx_ref,
+            return_url: req.body.return_url,
+        };
+
+        // Set up headers for CHAPA API request
+        const headers = {
+            headers: {
+                Authorization: `Bearer ${CHAPA_AUTH_KEY}`,
+                "Content-Type": "application/json",
+            },
+        };
+
+        // Make a POST request to CHAPA API
+        const response = await axios.post(CHAPA_API_URL, body, headers);
+        
+        // Get the checkout URL from the CHAPA API response
+        const checkoutUrl = response.data.data.checkout_url;
+
+        // Send the checkout URL back to the frontend
+        res.json({ success: true, checkoutUrl });
+    } catch (error) {
+        console.error('Error initiating payment:', error);
+        res.status(500).json({ success: false, error: "Error initiating payment" });
+    }
+});
+
 
 // Creating API for adding products
 app.post('/addproduct', async (req, res) => {
@@ -219,10 +256,15 @@ app.post('/login', async (req, res) => {
     }
 });
 
+// Define a route handler for the root URL
+app.get('/', (req, res) => {
+    res.send('Welcome to the e-commerce API'); 
+});
+
 app.listen(port, (error) => {
     if (!error) {
         console.log('Server is running on port: ' + port);
     } else {
         console.log('Error found: ' + error);
     }
-})
+});

@@ -10,39 +10,46 @@ export const Footer = () => {
   return (
     <div className='footer bg-gray-800 text-white py-12'>
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="mb-6 md:mb-0 text-center md:text-left"> {/* Center text on mobile and align left on desktop */}
-          <img src={footer_logo} alt="Footer Logo" className="w-20 h-auto mb-2 md:w-16 md:h-auto md:mb-0" /> {/* Slightly smaller logo */}
+        <div className="mb-6 md:mb-0 text-center md:text-left">
+          <img src={footer_logo} alt="Footer Logo" className="w-16 h-auto mb-2 md:w-12 md:h-auto md:mb-0" />
           <p className="text-xs"></p>
         </div>
 
-        <ul className="footer-links flex flex-wrap mb-6 md:mb-0">
-          <li className="mr-4 mb-2 md:mb-0"><a href="#">Company</a></li>
-          <li className="mr-4 mb-2 md:mb-0"><a href="#">Products</a></li>
-          <li className="mr-4 mb-2 md:mb-0"><a href="#">Offices</a></li>
-          <li className="mr-4 mb-2 md:mb-0"><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul className="footer-links flex flex-wrap justify-center md:justify-center mb-6 md:mb-0 text-center" style={{ gap: '20px' }}> {/* Updated this line */}
+          <li className="mr-4 mb-2 md:mb-0"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Company</a></li>
+          <li className="mr-4 mb-2 md:mb-0"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Products</a></li>
+          <li className="mr-4 mb-2 md:mb-0"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Offices</a></li>
+          <li className="mr-4 mb-2 md:mb-0"><a href="https://www.linkedin.com/in/onshafi">Contact</a></li>
         </ul>
 
-        <div className="footer-social-icon flex mb-6 md:mb-0">
+        <div className="footer-social-icon flex mb-6 md:mb-0 ml-auto">
           <div className="footer-icons-container mr-4">
-            <img src={instagram_icon} alt="Instagram" className="w-12 hover:animate-bounce" /> {/* Increase icon size */}
+            <a href="https://www.instagram.com/yamihashira_" className="flex items-center justify-center"> {/* Updated this line */}
+              <img src={instagram_icon} alt="Instagram" className="w-12 hover:animate-bounce" />
+            </a>
           </div>
 
           <div className="footer-icons-container mr-4">
-            <img src={pinterest_icon} alt="Pinterest" className="w-12 hover:animate-bounce" /> {/* Increase icon size */}
+            <a href="https://www.pinterest.com" className="flex items-center justify-center"> {/* Updated this line */}
+              <img src={pinterest_icon} alt="Pinterest" className="w-12 hover:animate-bounce" />
+            </a>
           </div>
 
           <div className="footer-icons-container mr-4">
-            <img src={whatsapp_icon} alt="WhatsApp" className="w-12 hover:animate-bounce" /> {/* Increase icon size */}
+            <a href="https://www.whatsapp.com" className="flex items-center justify-center"> {/* Updated this line */}
+              <img src={whatsapp_icon} alt="WhatsApp" className="w-12 hover:animate-bounce" />
+            </a>
           </div>
 
           <div className="footer-icons-container">
-            <img src={github_icon} alt="Github" className="w-12 hover:animate-bounce" /> {/* Increase icon size */}
+            <a href="https://github.com/onyxvail" className="flex items-center justify-center"> {/* Updated this line */}
+              <img src={github_icon} alt="Github" className="w-12 hover:animate-bounce" />
+            </a>
           </div>
         </div>
       </div>
 
-      <div className="footer-copyright text-center mt-8">
+      <div className="footer-copyright text-center mt-8 ml-auto">
         <hr className="border-gray-600 mb-4" />
         <p className="text-sm">Copyrights @ 2024. All Rights Reserved.</p>
       </div>

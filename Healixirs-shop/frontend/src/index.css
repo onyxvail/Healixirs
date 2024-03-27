@@ -25,9 +25,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/* Example of using Tailwind CSS classes */
-.container {
-  @apply mx-auto px-4; /* Using Tailwind's utility classes */
-  max-width: 960px; /* Custom styles */
-}
