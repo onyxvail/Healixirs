@@ -1,11 +1,19 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom'; // Import Link component
+import React, { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ShopContext } from '../Context/ShopContext';
 import { Footer } from '../Components/Footer/Footer';
 import { Item } from '../Components/Items/Item';
 import dropdown_icon from '../Components/Assets/dropdown_icon.png';
+import soundFile from '../Components/Assets/7NA.mp3';
+
 
 const ShopCategory = (props) => {
+
+  useEffect(() => {
+    const audio = new Audio(soundFile);
+    audio.play();
+  }, []);
+
   const { all_product } = useContext(ShopContext);
 
   return (
