@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import { Navbar } from './Components/Navbar/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -13,6 +13,34 @@ import herbs_banner from './Components/Assets/banner_herbs.png';
 import ScrollToTopButton from './Components/ScrollUp/ScrollUp';
 
 function App() {
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if an element is in view
+      const element = document.getElementById('animate-on-scroll');
+      if (element && isElementInViewport(element)) {
+        element.classList.add('animate');
+      }
+    };
+
+    const isElementInViewport = (el) => {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Remove scroll event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div>
       <BrowserRouter>
@@ -27,7 +55,7 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<LoginSignup />} />
         </Routes>
-        <ScrollToTopButton /> {/* Include the ScrollToTopButton component */}
+        <ScrollToTopButton />
       </BrowserRouter>
     </div>
   );
