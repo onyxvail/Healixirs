@@ -39,7 +39,7 @@ import sword from "./sword.png";
 let all_product = [
   {
     id: 1,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Crimson Glyphs of Mana Duplication paired with Skull of Mysteria",
     category: "women",
     image: p1_img,
     new_price: 50.0,
@@ -47,7 +47,7 @@ let all_product = [
   },
   {
     id: 2,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Glacial Vestments of Sylvarien to harness the power of Frostmourne",
     category: "women",
     image: p2_img,
     new_price: 85.0,
@@ -55,7 +55,7 @@ let all_product = [
   },
   {
     id: 3,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Rosewood Enchantment of the Wood Elves tribe to enhance Fire Bolts and Summon Butterflies",
     category: "women",
     image: p3_img,
     new_price: 60.0,
@@ -63,7 +63,7 @@ let all_product = [
   },
   {
     id: 4,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Clovercrest Valkyrie Plate of the royal of the Clover Kingdom Noelle silva",
     category: "women",
     image: p4_img,
     new_price: 100.0,
@@ -71,7 +71,7 @@ let all_product = [
   },
   {
     id: 5,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Gorefang, the Mindbreaker's Pike made by the Orcs of the Bleeding Hollow ",
     category: "women",
     image: p5_img,
     new_price: 85.0,
@@ -79,7 +79,7 @@ let all_product = [
   },
   {
     id: 6,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "Crimson Nexus the Red Infinity Stone of Reality Shaping",
     category: "women",
     image: p6_img,
     new_price: 85.0,
@@ -87,7 +87,7 @@ let all_product = [
   },
   {
     id: 7,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "The Golden Armor of Lolth, coveted by dark elves, imbues its wearer with invincibility, shadow magic mastery, and dominion over spiders",
     category: "women",
     image: p7_img,
     new_price: 85.0,
@@ -95,7 +95,7 @@ let all_product = [
   },
   {
     id: 8,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "The Shadowcarved Sai, etched with ancient runes, empowers the Shadar-kai with shadowy prowess and swift, deadly precision",
     category: "women",
     image: p8_img,
     new_price: 85.0,
@@ -103,7 +103,7 @@ let all_product = [
   },
   {
     id: 9,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "The Emberforged Armor of Naivara, crafted from the fiery scales of a dragon, bestows upon the drow elves unmatched resilience against flame and the ability to harness the scorching power of their draconic ally",
     category: "women",
     image: p9_img,
     new_price: 85.0,
@@ -111,7 +111,7 @@ let all_product = [
   },
   {
     id: 10,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "The Sephiric Tome of Licht, wielded by the illustrious leader of the Elf Tribe and Apostle of Sephirah, contains the most potent and ancient spells known to existence, bearing the essence of primordial magic within its pages",
     category: "women",
     image: p10_img,
     new_price: 85.0,
@@ -119,7 +119,7 @@ let all_product = [
   },
   {
     id: 11,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "The Zephyrstar Staff, reconstructed by the Wood Elves, houses the bound essence of Sylph , the wind goddess and celestial energies, granting its wielder mastery over air currents and the guidance of stellar forces",
     category: "women",
     image: p11_img,
     new_price: 85.0,
@@ -127,7 +127,7 @@ let all_product = [
   },
   {
     id: 12,
-    name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name: "The Umbral Yari, crafted for the Shadar-kai, possesses a blade as dark as the depths of the void, honed to pierce through shadows and souls alike with chilling precision",
     category: "women",
     image: p12_img,
     new_price: 85.0,
@@ -135,7 +135,7 @@ let all_product = [
   },
   {
     id: 13,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "The Hozen Warrior Spear harnesses primal fury, while the Horadric Satchel contains boundless arcane secrets for adventurous souls.",
     category: "men",
     image: p13_img,
     new_price: 85.0,
@@ -143,7 +143,7 @@ let all_product = [
   },
   {
     id: 14,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "The Purple Major Glyph, pulsating with arcane energy, grants wielders enhanced magical abilities and insights into the mysteries of the cosmos",
     category: "men",
     image: p14_img,
     new_price: 85.0,
@@ -151,7 +151,7 @@ let all_product = [
   },
   {
     id: 15,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Skjǫldr, a shield of legendary repute, defends its bearer with unyielding strength, forged in the fires of ancient battles and blessed by the gods themselves.",
     category: "men",
     image: p15_img,
     new_price: 85.0,
@@ -159,7 +159,7 @@ let all_product = [
   },
   {
     id: 16,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "The Violet Infinity Stone, pulsating with boundless energy, grants its wielder unparalleled strength and the ability to manipulate the very fabric of existence with ease.",
     category: "men",
     image: p16_img,
     new_price: 85.0,
@@ -167,7 +167,7 @@ let all_product = [
   },
   {
     id: 17,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "The Shadowsteel Scimitar, forged in the depths of the Hollow, dances through the darkness with lethal grace, embodying the cunning and ferocity of its dark elven masters.",
     category: "men",
     image: p17_img,
     new_price: 85.0,
@@ -175,7 +175,7 @@ let all_product = [
   },
   {
     id: 18,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "The Sith Lord's iconic weapon, Darth Maul's Double-bladed Lightsaber, strikes fear into the hearts of foes with its crimson blades, embodying the relentless power and mastery of the dark side of the Force.",
     category: "men",
     image: p18_img,
     new_price: 85.0,
@@ -183,7 +183,7 @@ let all_product = [
   },
   {
     id: 19,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "The Dwarven Thunderbow, meticulously crafted by skilled artisans of the mountains, unleashes devastating force with each arrow, blending precision engineering with raw dwarven strength.",
     category: "men",
     image: p19_img,
     new_price: 85.0,
@@ -191,7 +191,7 @@ let all_product = [
   },
   {
     id: 20,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "The Spear of Izanagi, an ancient relic steeped in divine power, pierces through darkness with radiant purpose, embodying the will of the gods to shape the fate of the world.",
     category: "men",
     image: p20_img,
     new_price: 85.0,
@@ -199,7 +199,7 @@ let all_product = [
   },
   {
     id: 21,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "The Velkhana Frostblade, honed from the icy scales of the legendary dragon, slices through foes with glacial precision, leaving a trail of frozen despair in its wake.",
     category: "men",
     image: p21_img,
     new_price: 85.0,
@@ -207,7 +207,7 @@ let all_product = [
   },
   {
     id: 22,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "The Goblin's Sting, a crude yet surprisingly effective bow crafted from scavenged materials, delivers swift and unexpected strikes, reflecting the cunning and resourcefulness of its goblin makers.",
     category: "men",
     image: p22_img,
     new_price: 85.0,
@@ -215,7 +215,7 @@ let all_product = [
   },
   {
     id: 23,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "The Artemis Bow of the Minyar Elves, adorned with intricate elven craftsmanship and blessed by the goddess of the hunt, Artemis, unleashes arrows with unparalleled accuracy and deadly grace, embodying the unity of nature and elven prowess.",
     category: "men",
     image: p23_img,
     new_price: 85.0,
@@ -223,7 +223,7 @@ let all_product = [
   },
   {
     id: 24,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "The Flail of Darnosh, wreathed in flames and born of Orgrimmar's fiery forges, smashes through enemy defenses with relentless fury, while his Sword  cleaves through foes with brutal efficiency, both bearing the mark of orcish strength.",
     category: "men",
     image: p24_img,
     new_price: 85.0,
@@ -231,7 +231,7 @@ let all_product = [
   },
   {
     id: 25,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "The Jotun Puff, a rare flower that flourishes in the mistlands, emits an otherworldly glow and releases a delicate, soothing fragrance said to calm even the most troubled spirits and heal the wounds of the soul.",
     category: "Herbs",
     image: p25_img,
     new_price: 85.0,
@@ -239,7 +239,7 @@ let all_product = [
   },
   {
     id: 26,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "The Grimoire of Grisha Yeager, penned with the secrets and sciences of the Titans, holds the key to unlocking the transformative power that turns humans into Titans, revealing the enigmatic truths of their origin and potential.",
     category: "Herbs",
     image: p26_img,
     new_price: 85.0,
@@ -247,7 +247,7 @@ let all_product = [
   },
   {
     id: 27,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "The Minted Draught, infused with the refreshing essence of menthe, invigorates the senses and revitalizes the spirit, offering a rejuvenating burst of energy with every sip.",
     category: "Herbs",
     image: p27_img,
     new_price: 85.0,
@@ -255,7 +255,7 @@ let all_product = [
   },
   {
     id: 28,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "The Azure Bloom Draught, concocted from the petals of a rare blue flower found deep within enchanted forests, grants the drinker heightened senses and a fleeting glimpse into the ethereal realms, offering clarity and insight amidst uncertainty.",
     category: "Herbs",
     image: p28_img,
     new_price: 85.0,
@@ -263,7 +263,7 @@ let all_product = [
   },
   {
     id: 29,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "The Verdant Bloom Elixir, brewed from the essence of a mysterious green flower found in secluded groves, imbues the drinker with vitality and harmony, fostering growth and renewal in both body and spirit.",
     category: "Herbs",
     image: p29_img,
     new_price: 85.0,
@@ -271,7 +271,7 @@ let all_product = [
   },
   {
     id: 30,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Rosemary Drops, distilled from the essence of the sacred herb, bestow upon the imbiber heightened clarity of mind and resilience, warding off maladies of body and spirit with their rejuvenating properties.",
     category: "Herbs",
     image: p30_img,
     new_price: 85.0,
@@ -279,7 +279,7 @@ let all_product = [
   },
   {
     id: 31,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "Vyleyna's Rejuvenation Elixir, crafted with alchemical precision and infused with the essence of life, restores vitality and vigor to the weary, granting renewed strength and resilience against the trials of the world.",
     category: "Herbs",
     image: p31_img,
     new_price: 85.0,
@@ -287,7 +287,7 @@ let all_product = [
   },
   {
     id: 32,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "The Arborial Elixir, brewed from the essence of ancient trees and infused with the whispers of the forest, grants the drinker a deep connection to nature, imbuing them with strength, vitality, and a profound sense of harmony with the natural world.",
     category: "Herbs",
     image: p32_img,
     new_price: 85.0,
@@ -295,7 +295,7 @@ let all_product = [
   },
   {
     id: 33,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "The Shadowbloom Tonic, distilled from the rare flora that thrives in the depths of the Black Forest, possesses mysterious properties that heighten perception and grant fleeting glimpses into the realm of shadows, offering both enlightenment and peril to those who dare to partake",
     category: "Herbs",
     image: p33_img,
     new_price: 85.0,
@@ -303,7 +303,7 @@ let all_product = [
   },
   {
     id: 34,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "The Celestial Blossom Elixir, crafted from the petals of a pristine white flower found only in the most sacred groves, bestows upon the drinker a profound regeneration, rejuvenating the body, mind, and spirit with divine purity and grace.",
     category: "Herbs",
     image: p34_img,
     new_price: 85.0,
@@ -311,7 +311,7 @@ let all_product = [
   },
   {
     id: 35,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "The Plagueborne Draught, distilled from the tainted waters of the plague biome's cursed rain, grants the imbiber temporary immunity to toxins and diseases, albeit with a faint aura of corruption lingering upon the soul.",
     category: "Herbs",
     image: p35_img,
     new_price: 85.0,
@@ -319,7 +319,7 @@ let all_product = [
   },
   {
     id: 36,
-    name: "Boys Orange Colourblocked Hooded Sweatshirt",
+    name: "The Shadow Veil Tonic, concocted from the essence of elusive shadow herbs, grants the drinker temporary invisibility, allowing them to move unseen through the world, slipping past enemies and obstacles with silent grace.",
     category: "Herbs",
     image: p36_img,
     new_price: 85.0,
@@ -328,7 +328,7 @@ let all_product = [
 
   {
     id: 37,
-    name: "The Damned sword of Kleo",
+    name: "The Blade of the Virtuoso, wielded by the master swordsman whose skill is unmatched, this legendary sword slices through the air with unmatched precision and deadly finesse, earning its name through the tales of countless victories.",
     category: "women",
     image: sword,
     new_price: 120.0,
