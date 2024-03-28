@@ -63,5 +63,6 @@ To start the development server, run:
 
 ```bash
 npm run dev
+```
 
 ![Healixirs Image](images/healixirs.png)
