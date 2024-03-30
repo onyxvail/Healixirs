@@ -1,0 +1,23 @@
+.description-box{
+    background-color: bisque;
+    margin-top: 200px;
+}
+.description-box-item {
+    width: auto;
+    height: auto;
+    margin-bottom: 50px;
+    background-color: bisque;
+}
+.descriptionbox-navigator{
+    background-color: bisque;
+}
+.descriptionbox-nav-box {
+    background-color: bisque;
+    border-color: black;
+}
+.descriptionbox-description{
+    background-color: bisque;
+}
+.description-box-description p {
+    background-color: bisque;
+}
