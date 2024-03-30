@@ -1,25 +1,25 @@
 .popular-title-slide {
-  white-space: nowrap; /* Prevents text from wrapping */
-  color: #c4ef17; /* Set text color to customBlue */
-  font-size: 25px; /* Set the font size */
-  animation: slideRight 100s linear infinite; /* Apply animation */
+  white-space: nowrap;
+  color: #c4ef17;
+  font-size: 25px;
+  animation: slideRight 100s linear infinite;
   background :#0f1108;
 }
 
 .popular-item {
-  overflow: hidden; /* Hide overflowing content */
+  overflow: hidden;
 }
 
 .popular-item-slide {
-  display: inline-block; /* Display slides inline */
-  animation: slideRight 10s linear infinite; /* Apply animation */
+  display: inline-block;
+  animation: slideRight 10s linear infinite;
 }
 
 @keyframes slideRight {
   from {
-    transform: translateX(0); /* Initial position */
+    transform: translateX(0);
   }
   to {
-    transform: translateX(-100%); /* Slide to the left */
+    transform: translateX(-100%);
   }
 }

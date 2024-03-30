@@ -1,4 +1,4 @@
-import './Popular.css'; // Importing CSS may not be necessary if styles are defined in Tailwind
+import './Popular.css';
 import data_product from '../Assets/data.js';
 import { Item } from '../Items/Item';
 import Slider from 'react-slick';
@@ -36,7 +36,6 @@ export const Popular = () => {
         <Slider {...settings}>
           {data_product.map((item, i) => (
             <div key={i} className="popular-item-slide inline-block">
-              {/* Removed custom animation classes as Tailwind does not support animations */}
               <Item id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />
             </div>
           ))}

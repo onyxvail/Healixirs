@@ -1,6 +1,6 @@
 
 .product-image:hover {
-    animation: bounce 0.5s infinite alternate; /* Bouncing animation */
+    animation: bounce 0.5s infinite alternate;
   }
   
   @keyframes bounce {
@@ -8,27 +8,22 @@
       transform: translateY(0);
     }
     100% {
-      transform: translateY(-5px); /* Adjust the distance of bounce */
+      transform: translateY(-5px);
     }
   }
   .product-display-container {
     display: flex;
     flex-direction: column;
     min-height: 160vh; 
-    margin-bottom: -160px;/* Make the container at least full viewport height */
+    margin-bottom: -160px;
 }
 
 .productdisplay {
-    flex: 1; /* Grow to fill the remaining space */
+    flex: 1;
 }
 .product-image.main-image {
     width: 80%;
-    border-radius: ;20px
-    /* Adjust the size as needed */:;
-    -webkit-border-radius:20px;
-    -moz-border-radius:20px;
-    -ms-border-radius:20px;
-    -o-border-radius:50px;
+    border-radius:20px;
 }
 
 .main-image-slider .slick-list {
@@ -57,5 +52,5 @@
 .slick-dots {
     bottom: auto;
     top: -20px;
-    margin-left: -25px; /* Adjust the vertical position */
+    margin-left: -25px;
   }

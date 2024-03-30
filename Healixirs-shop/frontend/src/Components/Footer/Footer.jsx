@@ -15,7 +15,7 @@ export const Footer = () => {
           <p className="text-xs"></p>
         </div>
 
-        <ul className="footer-links flex flex-wrap justify-center md:justify-center mb-6 md:mb-0 text-center" style={{ gap: '20px' }}> {/* Updated this line */}
+        <ul className="footer-links flex flex-wrap justify-center md:justify-center mb-6 md:mb-0 text-center" style={{ gap: '20px' }}>
           <li className="mr-4 mb-2 md:mb-0"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Company</a></li>
           <li className="mr-4 mb-2 md:mb-0"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Products</a></li>
           <li className="mr-4 mb-2 md:mb-0"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Offices</a></li>
@@ -24,19 +24,19 @@ export const Footer = () => {
 
         <div className="footer-social-icon flex mb-6 md:mb-0 ml-auto">
           <div className="footer-icons-container mr-4">
-            <a href="https://www.instagram.com/yamihashira_" className="flex items-center justify-center"> {/* Updated this line */}
+            <a href="https://www.instagram.com/yamihashira_" className="flex items-center justify-center">
               <img src={instagram_icon} alt="Instagram" className="w-12 hover:animate-bounce" />
             </a>
           </div>
 
           <div className="footer-icons-container mr-4">
-            <a href="https://www.pinterest.com" className="flex items-center justify-center"> {/* Updated this line */}
+            <a href="https://www.pinterest.com" className="flex items-center justify-center">
               <img src={pinterest_icon} alt="Pinterest" className="w-12 hover:animate-bounce" />
             </a>
           </div>
 
           <div className="footer-icons-container mr-4">
-            <a href="https://www.whatsapp.com" className="flex items-center justify-center"> {/* Updated this line */}
+            <a href="https://www.whatsapp.com" className="flex items-center justify-center">
               <img src={whatsapp_icon} alt="WhatsApp" className="w-12 hover:animate-bounce" />
             </a>
           </div>

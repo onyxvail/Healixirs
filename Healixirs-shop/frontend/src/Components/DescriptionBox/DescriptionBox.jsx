@@ -13,13 +13,9 @@ export const DescriptionBox = () => {
       </div>
 
       <div className="descriptionbox-description flex flex-col gap-3 p-4 pb-16 text-sm">
-        <p>yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada
-          yada yada yada yada yada yadayada yada yada yada yada yadayada yada yada yada yada yada yada
-          yada yada yada yada yada yadayada yada yada yada yada yadayada yada yada yada yada yada - will be filled later
+        <p> desciption of the product
         </p>
-        <p>Never gonna let u up, never gonna let you down, Never gonna let u up, never gonna let you down,
-          Never gonna let u up, never gonna let you down, Never gonna let u up, never gonna let you down,
-          Never gonna let u up, never gonna let you down
+        <p> Very good product, I am very satisfied with the product. I will buy again.
         </p>
       </div>
     </div>

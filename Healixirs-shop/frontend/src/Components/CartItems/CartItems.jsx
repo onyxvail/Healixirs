@@ -14,11 +14,9 @@ const CartItems = () => {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    amount: getTotalCartAmount(), // Send total cart amount to the backend
-                    currency: 'USD', // Adjust currency if needed
-                    // Add other required parameters for CHAPA API
-                    // tx_ref: 'your_transaction_reference',
-                    // return_url: 'your_return_url',
+                    amount: getTotalCartAmount(),
+                    currency: 'USD',
+                 
                 })
             });
 
