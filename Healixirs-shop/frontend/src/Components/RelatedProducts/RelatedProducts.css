@@ -1,3 +1,16 @@
 .relatedproducts{
     gap: 3px;
 }
+.relatedproducts{
+    background-color: blanchedalmond;
+}
+.relatedproducts-item {
+    width: auto;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.relatedproducts-item img {
+    width: auto;
+    height: auto;
+}
