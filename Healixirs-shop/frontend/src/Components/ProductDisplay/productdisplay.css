@@ -34,14 +34,10 @@
     
 }
 .small-image img {
-    max-width: 50%;
+    width: 50%;
+    height: auto;
     margin-left: 45px;
     border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    margin-inline: 500px;
 }
 @media (max-width: 800px) {
     .productdisplay-left .slick-slide {
@@ -54,3 +50,9 @@
     top: -20px;
     margin-left: -25px;
   }
+
+.productdisplay-right h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
