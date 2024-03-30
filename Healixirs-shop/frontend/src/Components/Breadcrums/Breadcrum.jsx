@@ -17,7 +17,7 @@ export const Breadcrum = (props) => {
             <img src={arrow_icon} alt="Arrow Icon" className="h-4 w-auto" />
             <span className="text-gray-700">{product.category}</span>
             <img src={arrow_icon} alt="Arrow Icon" className="h-4 w-auto" />
-            <span className="text-gray-750">{product.name}</span>
+            <span className="text-gray-750 text-xs">{product.name}</span>
         </div>
     );
 };
