@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './CartItems.css';
 import remove_icon from '../Assets/cart_cross_icon.png';
 import { ShopContext } from '../../Context/ShopContext';
+import {Footer} from '../Footer/Footer';
 
 const CartItems = () => {
     const { all_product, cartItems, removeFromCart, getTotalCartAmount } = useContext(ShopContext);
@@ -37,7 +38,8 @@ const CartItems = () => {
     };
 
     return (
-        <div className='cartitems'>
+        <div className='cart-page bg-customNeon'>
+        <div  className='cartitems'>
             <div className="cartitems-format-main">
                 <p>Products</p>
                 <p>Title</p>
@@ -93,6 +95,8 @@ const CartItems = () => {
                     </div>
                  </div>
             </div>
+        </div>
+        <Footer/>
         </div>
     );
 }

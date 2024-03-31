@@ -1,5 +1,9 @@
 .cartitems{
-margin: 100px 170px;
+margin: auto auto;
+background-color: #c4ef17;
+margin-left: 50px;
+margin-right: 50px;
+
 }
 .cartitems hr{
     height: 3px;
@@ -70,11 +74,9 @@ margin: 100px 170px;
     cursor: cell;
     margin-left: -4px;
     border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
+    margin-bottom: auto;
 }
+
 .cartitems-promocode{
     flex: 1;
     font-size: 16px;
