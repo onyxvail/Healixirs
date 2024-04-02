@@ -35,7 +35,7 @@ Motivated by a passion for technology and a commitment to excellence, I meticulo
         <span className="relative inline-block mr-4">Project Lore</span>
       </div>
       <h1 className="text-lg text-customBlack mt-5">
-      <span className="text-red-500">Project name: </span> Healixirs & Celestial Remedex: Vyleyna's Cosmic Codex.
+      <span className="text-red-500">Project name: </span> Healixirs & Celestial Remedex:Vyleyna's Cosmic Codex.
       </h1>
       <p className="text-lg text-customBlack mt-5 "> <span className="text-red-500">Healixirs: </span> Represents Vyleyna's expertise in crafting potent healing potions and elixirs using rare herbs and mystical gear she gathers during her cosmic journeys. These healixirs are renowned for their miraculous properties and are sought after by those in need of healing and power across the galaxy.</p>
       <p className="text-lg text-customBlack mt-5"> <span className="text-red-500">Celestial Remedex: </span> Refers to Vyleyna's collection of cosmic remedies , each meticulously documented in her codex. These celestial remedies are not only effective in treating physical ailments but also possess mystical properties that can restore balance and harmony to the mind, body, and spirit. </p>
