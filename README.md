@@ -66,3 +66,5 @@ npm run dev
 ```
 
 ![Healixirs Image](images/healixirs.png)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eaa8e525-b2fa-450c-a221-6ef93987d012/deploy-status)](https://app.netlify.com/sites/healixirs/deploys)
